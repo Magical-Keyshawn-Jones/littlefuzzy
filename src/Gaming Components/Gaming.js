@@ -1,7 +1,6 @@
-import { Route } from 'react-router-dom';
 
-function Gaming (props) {
 
+function Gaming () {
     
     return (
         <div>
