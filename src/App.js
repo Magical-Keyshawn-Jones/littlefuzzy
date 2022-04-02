@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
 import Gaming from './Gaming Components/Gaming';
 import Games from './Gaming Components/Games';
+import Home from './Home Components/Home';
 // Goals: Add a video on my webpage/ Add moving png jpeg images on my webpage
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
           <Gaming/>
         </Route>
         <Route path='/'>
-          Hi Sheeple!
+          <Home/>
         </Route>
       </Switch>
    </div>
