@@ -18,7 +18,7 @@ function App() {
 
   // Returning my Website
   return (
-   <div>
+   <div className='BodyAuty'>
       <div className='Navigate'>
         <div className='Nav-Intro'>
           <p>{navWording}</p>

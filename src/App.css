@@ -42,6 +42,11 @@ table {
 	border-spacing: 0;
 }
 
+/* Body Decorations */
+.BodyAuty {
+  height: 100rem;
+}
+
 /* Link Decorations */
 .Link {
   text-decoration: none;
@@ -71,4 +76,11 @@ table {
 /* Home Button in Nav Bar to fix spacing with Nav Intro */
 #HomeButton {
   margin-left: 35rem;
+}
+
+/* Home Decorations */
+
+.HomeSheep {
+  height: 100%;
+  width: 100%;
 }
