@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
+import Cooking from './Cooking Components/Cooking';
 import Gaming from './Gaming Components/Gaming';
 import Games from './Gaming Components/Games';
 import Home from './Home Components/Home';
@@ -10,7 +11,8 @@ function App() {
   // Storing Welcome words in a Variable
   const navWords = {
     home: 'Welcome to my Home!',
-    gaming: 'Super Awesome Gaming Area!'
+    gaming: 'Super Awesome Gaming Area!',
+    cooking: 'Ruthy-G Cooking Shout out!'
   }
 
   // Storing navWords in useState to be used in my nav
@@ -25,7 +27,8 @@ function App() {
         </div>
         <nav>
           <Link to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</Link>
-          <Link to='/gaming' className='Link' onClick={()=> {setNavWording(navWords.gaming)}}>Gaming</Link>
+          <Link to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</Link>
+          <Link to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)} >Cooking</Link>
           {/* <Link to='/gaming/1'>Test</Link>
           <Link to='/gaming/2'>Test</Link>
           <Link to='/gaming/3'>Test</Link> */}
@@ -33,6 +36,9 @@ function App() {
       </div>
 
       <Switch>
+        <Route path='/cooking'>
+          <Cooking/>
+        </Route>
         <Route path='/gaming/:viral'>
           <Games/>
         </Route>

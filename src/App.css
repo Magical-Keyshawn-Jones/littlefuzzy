@@ -54,7 +54,7 @@ table {
   margin-right: 1rem;
 }
 
-/* Navigation Decorations */
+/* Navigation Decorations!!!! */
 
 .Navigate {
   display: flex;
@@ -68,19 +68,55 @@ table {
 
 .Nav-Intro {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
   font-size: 2.6rem;
   color: rgb(0, 247, 255);
 }
 
-/* Home Button in Nav Bar to fix spacing with Nav Intro */
-#HomeButton {
-  margin-left: 35rem;
-}
-
-/* Home Decorations */
+/* Home Decorations!!! */
 
 .HomeSheep {
   height: 100%;
   width: 100%;
+  display: flex;
+}
+
+/* Video Player */
+.HomePlayer {
+  width: 50%;
+  margin-left: 5rem;
+  /* Keep both heights there */
+  /* height: 31rem; */
+  height: 31%;
+  margin-top: 5rem;
+}
+
+/* About Me !!! */
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 1000;
+  margin-top: 8rem;
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+
+.aboutHeader {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* About Me paragraph words */
+.Doorknob {
+  color: pink;
+}
+
+.Pink {
+  color: pink;
+}
+
+.PeoplePerson {
+  font-weight: bold;
 }
