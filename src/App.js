@@ -10,6 +10,7 @@ import Home from './Home Components/Home';
 // Add a hover mechanic for accessibility (Like showing words)
 // Make font smaller 
 // Try to add a legacy Class Components instead function components for practice
+// Create a random form wording adjective, verb, noun, thing
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
 function App() {
