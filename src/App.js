@@ -19,7 +19,7 @@ function App() {
     gaming: 'Super Awesome Gaming Area!',
     cooking: 'Ruthy-G Cooking Shout out!'
   }
-something has changed
+
   // Storing navWords in useState to be used in my nav
   const [navWording, setNavWording] = useState(navWords.home)
 
