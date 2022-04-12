@@ -5,7 +5,12 @@ import Cooking from './Cooking Components/Cooking';
 import Gaming from './Gaming Components/Gaming';
 import Games from './Gaming Components/Games';
 import Home from './Home Components/Home';
-// Goals: Add a video on my webpage/ Add moving png jpeg images on my webpage
+// Add moving png jpeg images on my webpage
+// Add a form that contributes to making something
+// Add a hover mechanic for accessibility (Like showing words)
+// Make font smaller 
+// Try to add a legacy Class Components instead function components for practice
+// End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
 function App() {
   // Storing Welcome words in a Variable

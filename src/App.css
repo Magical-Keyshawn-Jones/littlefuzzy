@@ -64,6 +64,7 @@ table {
   background-image: url(./Images/peace-of-landscape-oa.jpg);
   background-size: auto;
   height: 5rem;
+  /* position: fixed; */
 }
 
 .Nav-Intro {
@@ -98,13 +99,22 @@ table {
   flex-direction: column;
   align-items: center;
   flex-shrink: 1000;
-  margin-top: 8rem;
+  height: 31%;
+  margin-top: 5rem;
   margin-left: 2rem;
-  font-size: 3rem;
+  font-size: 5rem;
+  background-image: url(./Images/flowers_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.AboutMeList {
+  font-size: 2.7rem;
+  margin-left: 2rem;
 }
 
 .aboutHeader {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 5rem;
 }
 
