@@ -78,18 +78,19 @@ table {
 /* Home Decorations!!! */
 
 .HomeSheep {
-  height: 100%;
-  width: 100%;
   display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* Video Player */
 .HomePlayer {
+  display: inline-block;
   width: 50%;
   margin-left: 5rem;
   /* Keep both heights there */
-  /* height: 31rem; */
-  height: 31%;
+  height: 31rem;
+  /* height: 31%; */
   margin-top: 5rem;
 }
 
@@ -100,7 +101,8 @@ table {
   flex-direction: column;
   align-items: center;
   flex-shrink: 1000;
-  height: 31%;
+  height: 31rem;
+  /* height: 31%; */
   margin-top: 5rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -152,6 +154,16 @@ table {
   font-weight: bold;
 }
 
+/* SillyForm Decorations for Home Component */
+.SillyFormHolder {
+  display: inline;
+  margin: 0 5rem;
+}
+
+.SillyParagraph {
+  display: inline;
+}
+
 /* Gaming Decorations */
 
 .GamingHome {
@@ -177,3 +189,4 @@ table {
   justify-content: center;
   font-size: 5rem;
 }
+

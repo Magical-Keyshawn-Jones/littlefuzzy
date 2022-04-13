@@ -1,4 +1,6 @@
 import ReactPlayer from 'react-player';
+import Silly from '../Form Components/Silly'
+// Make form and afterwards make a button to get rid of the form
 
 function Home () {
 
@@ -26,9 +28,12 @@ function Home () {
         </div>
     
     return (
-        <div className='HomeSheep'>
-            {homeVideo}
-            {aboutMe}
+        <div>
+            <div className='HomeSheep'>
+                {homeVideo}
+                {aboutMe}
+            </div>
+            <Silly/>
         </div>
     )
 }
