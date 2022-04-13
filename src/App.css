@@ -95,6 +95,7 @@ table {
 
 /* About Me !!! */
 .aboutMe {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,32 +103,40 @@ table {
   height: 31%;
   margin-top: 5rem;
   margin-left: 2rem;
+  margin-right: 2rem;
   font-size: 5rem;
   position: relative;
+
+}
+
+.aboutMe::before {
+  content: '';
+  display:block;
+  position: absolute;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
   background-image: url(./Images/flowers_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* .aboutMeImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 1000;
-  height: 31%;
-  margin-top: 5rem;
-  margin-left: 2rem;
-  font-size: 5rem;
-} */
+.aboutMeListHolder {
+  position: relative;
+  font-size: 4rem;
+}
 
 .AboutMeList {
+  margin-bottom: 1rem;
+  position: relative;
   font-size: 2.7rem;
   margin-left: 2rem;
 }
 
 .aboutHeader {
+  position: relative;
   font-size: 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 /* About Me paragraph words */
@@ -141,4 +150,30 @@ table {
 
 .PeoplePerson {
   font-weight: bold;
+}
+
+/* Gaming Decorations */
+
+.GamingHome {
+  position: relative;
+}
+
+.GamingHome::before {
+  content: '';
+  display: block;
+  position: absolute;
+  opacity: .6;
+  background-position: 50% 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(./Images/God_of_War.jpg);
+  background-repeat: no-repeat;
+}
+
+.GamingTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
 }

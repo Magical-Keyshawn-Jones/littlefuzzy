@@ -11,6 +11,7 @@ import Home from './Home Components/Home';
 // Make font smaller 
 // Try to add a legacy Class Components instead function components for practice
 // Create a random form wording adjective, verb, noun, thing
+// Try Using Position and Display css more often 
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
 function App() {

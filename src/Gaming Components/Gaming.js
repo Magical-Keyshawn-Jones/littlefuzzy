@@ -1,11 +1,12 @@
-import God_of_War from '../Images/God_of_War.jpg'
+// import God_of_War from '../Images/God_of_War.jpg'
 
 function Gaming () {
     
     return (
-        <div>
-            I love Gaming Yall!
-            <img src={God_of_War} alt='God of War'/>
+        <div className='GamingHome'>
+            <div className='GamingTitle'>
+                <h1>I love Gaming Yall!!!</h1>
+            </div>
         </div>
     )
 }

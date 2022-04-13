@@ -16,7 +16,7 @@ function Home () {
                 I have a passion for God, Video Games, and Coding. I love acting silly and 
                 making people laugh. <span className='PeoplePerson'>100% People Person!</span>
             </p> */}
-            <ul className='aboutHeader'>
+            <ul className='aboutMeListHolder'>
                 <li className='AboutMeList'>My nickname is <span className='Doorknob'>Doorknob</span></li>
                 <li className='AboutMeList'>I love the color <span className='Pink'>Pink</span></li>
                 <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
