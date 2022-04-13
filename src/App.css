@@ -165,6 +165,11 @@ table {
   display: inline-block;
 }
 
+.testInput::after {
+  content: attr(data-error);
+  color: red;
+}
+
 .SillyParagraph {
   display:inline;
   position: relative;
