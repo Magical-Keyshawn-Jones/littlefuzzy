@@ -4,6 +4,7 @@ const sillyTester = yup.object().shape({
     name: yup
     .string()
     .trim()
+    .min(5,'Need more than that kid')
     .required('Name is required')
 })
 
