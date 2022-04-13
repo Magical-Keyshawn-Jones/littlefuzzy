@@ -80,6 +80,7 @@ table {
 .HomeSheep {
   display: flex;
   width: 100%;
+  height:fit-content;
   margin-bottom: 2rem;
 }
 
@@ -156,11 +157,21 @@ table {
 
 /* SillyForm Decorations for Home Component */
 .SillyFormHolder {
-  display: inline;
+  display: inline-block;
   margin: 0 5rem;
 }
 
+.SillyForm {
+  display: inline-block;
+}
+
 .SillyParagraph {
+  display:inline;
+  position: relative;
+  left: 50%;
+}
+
+.SillyParagraph p {
   display: inline;
 }
 
