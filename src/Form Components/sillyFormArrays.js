@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 
 const movementVerbs = [
     'bolted', 'bounced', 'cantered', 'charged', 'clambered', 'climbed',
@@ -20,8 +22,38 @@ const person = [
  'Half-sister', 'Grandparents', 'Children', 'Brother-in-Law', 'Stepfather'   
 ]
 
-export const sillyWords = [
+const sillyWords = [
   person, movementVerbs
 ]
 
+// Random Number function
+// SideNote it is possible to get a random in between number
+function sillyRandomNumber (number) {
+  const randomNumber = Math.floor(Math.random() * number)
+  return randomNumber
+}
+
+// Creating a Custom UseState that returns a random Number based on the length of array
+function useNumber (array) {
+  
+  // Storing array.length in state
+  const [arrayNumber, setArrayNumber]= useState(array.length)
+
+  // Storing random number inside a variable to prevent infinite loop
+  const sillyRandomNumbers = sillyRandomNumber(arrayNumber)
+
+  // Storing random number in state
+  const [randomNumber, setRandomNumber] =useState(sillyRandomNumbers)
+
+  // Returning the random number and Set arrayNumber (setRandomNumber will not be used)
+  return [randomNumber, setArrayNumber]
+
+} 
+
+
+export {
+  sillyWords,
+  useNumber,
+  
+}
 // console.log(sillyWords)

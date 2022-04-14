@@ -1,6 +1,7 @@
 import sillyTester from "./SillyValidation";
 // Reference SillyForm Array to find Specific Words
 import { sillyWords } from "./sillyFormArrays";
+import { useNumber } from "./sillyFormArrays";
 import * as yup from 'yup';
 import { useState } from 'react'
 
@@ -11,6 +12,10 @@ import { useState } from 'react'
 // use cypress
 
 function Silly () {
+
+    const [number, setNumber] = useNumber(sillyWords[0])
+
+    console.log(number)
 
     // initial Form Values
     const initialSillyValues = {
