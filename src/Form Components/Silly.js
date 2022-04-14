@@ -8,6 +8,7 @@ import { useState } from 'react'
 // Dropdown options
 // Radio
 // Customize to validation form 
+// use cypress
 
 function Silly () {
 
@@ -22,28 +23,30 @@ function Silly () {
     }
 
     // Making States for initial Silly and Error Values
-    const [sillyValues, setSillyValues] = useState(initialSillyValues)
+    const [silly, setSilly, handleSilly] = useInput(initialSillyValues)
     const [errorValues, setErrorValues] = useState(errorSillyValues)
 
     // Validator function to Test Form values inputs
     function validator (name, value) {
         yup.reach(sillyTester, name)
         .validate(value)
-        .then(()=> setErrorValues({...sillyValues, [name]: ''}))
-        .catch(err => setErrorValues({...sillyValues, [name]: err.errors[0]})) //err.errors is a completely unrelated variable. !Always! use errors to show error!
+        .then(()=> setErrorValues({...silly, [name]: ''}))
+        .catch(err => setErrorValues({...silly, [name]: err.errors[0]})) //err.errors is a completely unrelated variable. !Always! use errors to show error!
     }
 
     // change function for OnChangeHandler
     function change (name, value) {
 
-        setSillyValues({...sillyValues, [name]: value})
+        setSilly({...silly, [name]: value})
 
         // Validates the input
         validator(name, value)
     }
 
-    // onChange handler
-    function onChangeHandler (event) {
+    // Making custom hook for onChange
+function useInput  (initialValue) {
+    const [value, setValue] = useState(initialValue)
+    function handleChanges (event) {
         
         // Grabbing values
         const { name, type, checked, value } = event.target
@@ -54,7 +57,8 @@ function Silly () {
         change(name, checkboxValue)
     }
 
-    console.log(sillyWords)
+    return [value, setValue, handleChanges]
+}
 
     return (
        <div className='SillyFormHolder'>
@@ -66,8 +70,8 @@ function Silly () {
                     type='text'
                     name='name'
                     placeholder='Type name here'
-                    value={sillyValues.name}
-                    onChange={onChangeHandler}
+                    value={silly.name}
+                    onChange={handleSilly}
                     />
                     {errorValues.name}
                 </label>

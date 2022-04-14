@@ -1,7 +1,5 @@
 
-
-// Verb Generator for sillyParagraph
-export const movementVerbs = [
+const movementVerbs = [
     'bolted', 'bounced', 'cantered', 'charged', 'clambered', 'climbed',
     'coasted', 'darted', 'dashed', 'drifted', 'clumped', 'crawled', 'crept',
     'flown', 'frolicked', 'galloped', 'glided', 'hastened', 'hiked', 'hopped',
@@ -13,7 +11,7 @@ export const movementVerbs = [
     'tiptoed', 'traveled', 'trudged', 'vaulted', 'waddled', 'wandered', 'zigzagged', 'zoomed'
 ]
 
-export const person = [
+const person = [
  'siblings', 'relative', 'Nuclear family', 'Foster Family', 'In-laws',
  'Grandfather', 'Grandmother', 'Father', 'Mother', 'Uncle', 'Aunt', 
  'Sister-in-Law', 'Brother', 'Sister', 'Cousin' , 'Nephew', 'Niece', 
