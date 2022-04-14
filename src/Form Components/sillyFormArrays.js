@@ -23,7 +23,8 @@ const person = [
 ]
 
 const sillyWords = [
-  person, movementVerbs
+  person, 
+  movementVerbs,
 ]
 
 // Random Number function
@@ -52,8 +53,9 @@ function useNumber (array) {
 
 
 export {
-  sillyWords,
+  person,
+  movementVerbs,
   useNumber,
-  
+
 }
 // console.log(sillyWords)

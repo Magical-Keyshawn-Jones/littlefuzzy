@@ -1,9 +1,8 @@
 import sillyTester from "./SillyValidation";
 // Reference SillyForm Array to find Specific Words
-import { sillyWords } from "./sillyFormArrays";
-import { useNumber } from "./sillyFormArrays";
+import { useNumber, person, movementVerbs } from "./sillyFormArrays";
 import * as yup from 'yup';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Make a cool slider
 // Dropdown options
@@ -13,9 +12,8 @@ import { useState } from 'react'
 
 function Silly () {
 
-    const [number, setNumber] = useNumber(sillyWords[0])
-
-    console.log(number)
+    const [personNumber, setPersonNumber] = useNumber(person)
+    const [movementNumbers, setMovementNumbers] = useNumber(movementVerbs)
 
     // initial Form Values
     const initialSillyValues = {
@@ -80,9 +78,10 @@ function useInput  (initialValue) {
                     />
                     {errorValues.name}
                 </label>
+                <button>Submit</button>
             </form>
             <div className='SillyParagraph'>
-                <p>Insert Form submit Info here</p>
+                <p>{`My ${person[personNumber]} has ${movementVerbs[movementNumbers]} towards polar bears`}</p>
             </div>
        </div>
     )
