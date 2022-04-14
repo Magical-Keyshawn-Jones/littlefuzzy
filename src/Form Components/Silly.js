@@ -2,7 +2,7 @@ import sillyTester from "./SillyValidation";
 // Reference SillyForm Array to find Specific Words
 import { useNumber, person, movementVerbs } from "./sillyFormArrays";
 import * as yup from 'yup';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 // Make a cool slider
 // Dropdown options
