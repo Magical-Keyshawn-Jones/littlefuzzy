@@ -10,13 +10,8 @@ describe('Testing Test', () => {
       expect(true).to.equal(true)
     })
 
+    // For Now helps stops loop
     it('Visits the Kitchen Sink', () => {
         cy.visit('http://localhost:3000/')
       })
   })
-
-//   describe('Can Visit Website', () => {
-//     it('Visits the Kitchen Sink', () => {
-//       cy.visit('http://localhost:3000/')
-//     })
-//   })

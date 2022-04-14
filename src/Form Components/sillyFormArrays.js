@@ -22,11 +22,6 @@ const person = [
  'Half-sister', 'Grandparents', 'Children', 'Brother-in-Law', 'Stepfather'   
 ]
 
-const sillyWords = [
-  person, 
-  movementVerbs,
-]
-
 // Random Number function
 // SideNote it is possible to get a random in between number
 function sillyRandomNumber (number) {
