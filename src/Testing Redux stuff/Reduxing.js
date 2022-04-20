@@ -20,3 +20,5 @@ function mapStateToProps (state) {
 
 // Connect is connecting the component to Storage/Bank/Safe/Inventory
 export default connect(mapStateToProps, {})(MovieList)
+
+// testing push
