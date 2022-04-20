@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
+import { connect } from 'react-redux';
 import Cooking from './Cooking Components/Cooking';
 import Gaming from './Gaming Components/Gaming';
 import Games from './Gaming Components/Games';
@@ -14,7 +15,12 @@ import Home from './Home Components/Home';
 // Try Using Position and Display css more often 
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
-function App() {
+function App (props) {
+
+  // Testing connect Redux
+  // const {movies, moviesToWatch, user} = props
+  // console.log(user)
+
   // Storing Welcome words in a Variable
   const navWords = {
     home: 'Welcome to my Home!',
@@ -60,4 +66,15 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+
+function GrabbingStorage (state) {
+  return {
+    movies: state.movies,
+
+    moviesToWatch: state.moviesToWatch,
+
+    user: state.user
+}
+}
+export default connect(GrabbingStorage, {})(App)
