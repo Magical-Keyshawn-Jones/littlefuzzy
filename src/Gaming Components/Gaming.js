@@ -1,6 +1,6 @@
 // import God_of_War from '../Images/God_of_War.jpg'
 
-function Gaming () {
+export function Gaming () {
     
     return (
         <div className='GamingHome'>
@@ -11,4 +11,4 @@ function Gaming () {
     )
 }
 
-export default Gaming;
+// export default Gaming;

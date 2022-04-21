@@ -1,5 +1,5 @@
 
-function Cooking () {
+export function Cooking () {
     return (
         <div>
             <h1>Insert Ruth's awesome cooking info here!</h1>
@@ -7,4 +7,4 @@ function Cooking () {
     )
 }
 
-export default Cooking
+// export default Cooking;

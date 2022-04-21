@@ -3,12 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Pokemon } from './Pokemon Components/Pokemon';
-import Cooking from './Cooking Components/Cooking';
-import Gaming from './Gaming Components/Gaming';
-import Games from './Gaming Components/Games';
-import Home from './Home Components/Home';
-// Export default an object then setting the function as methods to export all at once
+import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 // Add moving png jpeg images on my webpage
 // Add a form that contributes to making something
 // Add a hover mechanic for accessibility (Like showing words)

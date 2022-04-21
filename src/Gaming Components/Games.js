@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function Games () {
+export function Games () {
 
      // Storing Game objects inside of an array to Test useParams
      const videoGames = [
@@ -23,4 +23,4 @@ function Games () {
     )
 }
 
-export default Games
+// export default Games;

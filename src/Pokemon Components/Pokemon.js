@@ -4,16 +4,9 @@ import axios from "axios";
 // Pokemon api 'https://pokeapi.co/api/v2/pokemon/'
 
 export function Pokemon () {
+
     useEffect(()=>{
         axios.get('https://pokeapi.co/api/v2/pokemon/')
-        .then(res=> console.log(res))
-        .catch(err=> console.log('error!', err))
-
-        axios.get('https://pokeapi.co/api/v2/pokemon/1/')
-        .then(res=> console.log(res))
-        .catch(err=> console.log('error!', err))
-
-        axios.get('https://pokeapi.co/api/v2/pokemon-form/1/')
         .then(res=> console.log(res))
         .catch(err=> console.log('error!', err))
     },[])    

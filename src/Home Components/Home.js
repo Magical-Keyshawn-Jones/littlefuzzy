@@ -2,7 +2,7 @@ import ReactPlayer from 'react-player';
 import Silly from '../Form Components/Silly'
 // Make form and afterwards make a button to get rid of the form
 
-function Home () {
+export function Home () {
 
     // Making Home Video Player component
     const homeVideo = 
@@ -38,4 +38,4 @@ function Home () {
     )
 }
 
-export default Home;
+// export default Home;
