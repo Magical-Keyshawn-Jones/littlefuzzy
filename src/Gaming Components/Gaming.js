@@ -1,4 +1,3 @@
-// import God_of_War from '../Images/God_of_War.jpg'
 
 export function Gaming () {
     

@@ -1,6 +1,5 @@
 import './App.css';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
 import { connect } from 'react-redux';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
