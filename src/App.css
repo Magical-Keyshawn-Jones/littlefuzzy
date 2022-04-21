@@ -61,7 +61,7 @@ table {
   justify-content: right;
   align-items: center;
   font-size: 2.6rem;
-  background-image: url(./Images/peace-of-landscape-oa.jpg);
+  background-image: url(./Images/App&Home/peace-of-landscape-oa.jpg);
   background-size: auto;
   height: 5rem;
   /* position: fixed; */
@@ -119,7 +119,7 @@ table {
   opacity: .6;
   width: 100%;
   height: 100%;
-  background-image: url(./Images/flowers_1.jpg);
+  background-image: url(./Images/App&Home/flowers_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -195,7 +195,7 @@ table {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url(./Images/God_of_War.jpg);
+  background-image: url(./Images/Gaming/God_of_War.jpg);
   background-repeat: no-repeat;
 }
 
