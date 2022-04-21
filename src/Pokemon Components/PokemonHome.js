@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { Route, Switch, useParams} from 'react-router-dom';
 import { PokemonShowCase } from "./Pokemon";
-import { PokemonProfile } from "./PokemonProfile";
+import PokemonProfile  from "./PokemonProfile";
 
 export function Pokemon () {
     // Pokemon api 'https://pokeapi.co/api/v2/pokemon/'

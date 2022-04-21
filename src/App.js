@@ -16,6 +16,8 @@ function App (props) {
   // Testing connect Redux
   // const {movies, moviesToWatch, user} = props
   // console.log(user)
+  // console.log(movies)
+  // console.log(moviesToWatch)
 
   // Storing Welcome words in a Variable
   const navWords = {
@@ -71,11 +73,12 @@ function App (props) {
 
 function GrabbingStorage (state) {
   return {
-    movies: state.movies,
+    movies: state.information.movies,
 
-    moviesToWatch: state.moviesToWatch,
+    moviesToWatch: state.information.moviesToWatch,
 
-    user: state.user
+    user: state.information.user
 }
 }
+
 export default connect(GrabbingStorage, {})(App)
