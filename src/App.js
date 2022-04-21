@@ -1,11 +1,14 @@
 import './App.css';
-import { useState } from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Pokemon } from './Pokemon Components/Pokemon';
 import Cooking from './Cooking Components/Cooking';
 import Gaming from './Gaming Components/Gaming';
 import Games from './Gaming Components/Games';
 import Home from './Home Components/Home';
+// Export default an object then setting the function as methods to export all at once
 // Add moving png jpeg images on my webpage
 // Add a form that contributes to making something
 // Add a hover mechanic for accessibility (Like showing words)
@@ -16,7 +19,6 @@ import Home from './Home Components/Home';
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
 function App (props) {
-
   // Testing connect Redux
   // const {movies, moviesToWatch, user} = props
   // console.log(user)
@@ -25,7 +27,8 @@ function App (props) {
   const navWords = {
     home: 'Welcome to my Home!',
     gaming: 'Super Awesome Gaming Area!',
-    cooking: 'Ruthy-G Cooking Shout out!'
+    cooking: 'Ruthy-G Cooking Shout out!',
+    pokemon: 'I Hate Pokemon, Testing Redux'
   }
 
   // Storing navWords in useState to be used in my nav
@@ -41,7 +44,8 @@ function App (props) {
         <nav>
           <Link to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</Link>
           <Link to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</Link>
-          <Link to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)} >Cooking</Link>
+          <Link to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)}>Cooking</Link>
+          <Link to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</Link>
           {/* <Link to='/gaming/1'>Test</Link>
           <Link to='/gaming/2'>Test</Link>
           <Link to='/gaming/3'>Test</Link> */}
@@ -49,6 +53,9 @@ function App (props) {
       </div>
 
       <Switch>
+        <Route path='/pokemon'>
+          <Pokemon/>
+        </Route>
         <Route path='/cooking'>
           <Cooking/>
         </Route>

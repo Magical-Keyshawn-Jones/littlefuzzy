@@ -206,3 +206,13 @@ table {
   font-size: 5rem;
 }
 
+/* Pokemon Decorations */
+
+.pokemonBox {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemonHeading {
+  font-size: 4rem;
+}
