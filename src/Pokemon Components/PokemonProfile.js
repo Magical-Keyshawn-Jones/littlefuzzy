@@ -4,11 +4,9 @@ import { useState } from 'react';
 function PokemonProfile (props) {
     const { pokemon } = props
     const path = useHistory()
-    const [newPokemon, setNewPokemon] = useState('')
+    const [newPokemon, setNewPokemon] = useState(pokemon)
 
-    console.log(newPokemon)
-    console.log(newPokemon[0])
-
+    
     return (
         <div onClick={()=>{path.push('/pokemon')}}>
             Insider Pokemon Here
@@ -16,10 +14,5 @@ function PokemonProfile (props) {
     )
 }
 
-function GrabbingStorage (state) {
-    return {
-        pokemon: state.pokemonInfo.pokemon
-    }
-}
 
-export default connect(GrabbingStorage, {})(PokemonProfile)
+export default connect(null, {})(PokemonProfile)

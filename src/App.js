@@ -1,8 +1,10 @@
 import './App.css';
-import { useState } from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { Link, Route, Switch}from 'react-router-dom';
 import { connect } from 'react-redux';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
+import * as actionCreators from './Redux Related/Action-Creators'
 // Add moving png jpeg images on my webpage
 // Add a form that contributes to making something
 // Add a hover mechanic for accessibility (Like showing words)
@@ -13,11 +15,8 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
 function App (props) {
-  // Testing connect Redux
-  // const {movies, moviesToWatch, user} = props
-  // console.log(user)
-  // console.log(movies)
-  // console.log(moviesToWatch)
+
+  const { fetchPokemon, GrabPokemon } = props
 
   // Storing Welcome words in a Variable
   const navWords = {
@@ -26,6 +25,8 @@ function App (props) {
     cooking: 'Ruthy-G Cooking Shout out!',
     pokemon: 'I Hate Pokemon, Testing Redux'
   }
+
+  useEffect(()=>{GrabPokemon()},[])
 
   // Storing navWords in useState to be used in my nav
   const [navWording, setNavWording] = useState(navWords.home)
@@ -50,7 +51,7 @@ function App (props) {
 
       <Switch>
         <Route path='/pokemon'>
-          <Pokemon/>
+          <Pokemon pokemon={fetchPokemon} />
         </Route>
         <Route path='/cooking'>
           <Cooking/>
@@ -69,16 +70,11 @@ function App (props) {
   );
 }
 
-// export default App;
-
-function GrabbingStorage (state) {
+function GrabbingStorage(state){
   return {
-    movies: state.information.movies,
-
-    moviesToWatch: state.information.moviesToWatch,
-
-    user: state.information.user
-}
+    fetchPokemon: state.FetchPokemon
+  }
 }
 
-export default connect(GrabbingStorage, {})(App)
+
+export default connect(GrabbingStorage, actionCreators)(App)

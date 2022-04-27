@@ -1,10 +1,11 @@
 import { Route, Switch, useParams} from 'react-router-dom';
-import { PokemonShowCase } from "./Pokemon";
+import { PokemonShowCase } from "./PokemonShowcase";
 import PokemonProfile  from "./PokemonProfile";
 
-export function Pokemon () {
+export function Pokemon (props) {
     // Pokemon api 'https://pokeapi.co/api/v2/pokemon/'
 
+    const { pokemon } = props
     const { pokemonId } = useParams
 
     return ( 
@@ -15,7 +16,7 @@ export function Pokemon () {
                     <PokemonProfile/>
                 </Route>
                 <Route path='/pokemon'>
-                    <PokemonShowCase/>
+                    <PokemonShowCase pokemon={pokemon} />
                 </Route>
             </Switch>
         </div>   
