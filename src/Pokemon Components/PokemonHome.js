@@ -11,19 +11,10 @@ export function Pokemon (props) {
 
     return ( 
         <div className='pokemonBox'>
-
             <Routes>
                 <Route path='/pokemon/:pokemonId' element={<PokemonProfile pokemon={pokemon} />} />
                 <Route path='/' element={<PokemonShowCase pokemon={pokemon} />} />
             </Routes>
-            {/* <Switch>
-                <Route  path='/pokemon/:pokemonId'>
-                    <PokemonProfile pokemon={pokemon} />
-                </Route>
-                <Route path='/pokemon'>
-                    <PokemonShowCase pokemon={pokemon} />
-                </Route>
-            </Switch> */}
         </div>   
     )
 }

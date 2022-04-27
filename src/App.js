@@ -1,12 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { NavLink, Routes, Route, BrowserRouter, Link}from 'react-router-dom';
-import { GrabPokemon } from './Redux Related/Action-Creators';
-import { Provider, connect, useDispatch } from 'react-redux';
-import { configureStore, createAction } from '@reduxjs/toolkit';
-import PokemonReducer from './Redux Related/Reducers'
-import { fetchPokemon, grabbingPokemons, testingReducer, testAgain } from './Redux Related/Reducers';
-// import * as actionCreators from './Redux Related/Reducers'
+import { Routes, Route, Link}from 'react-router-dom';
+import { connect, useDispatch } from 'react-redux';
+import { grabbingPokemons } from './Redux Related/Reducers';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
@@ -19,7 +15,6 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 // Try Using Position and Display css more often 
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
-//  function App (props) {
  function App (props) {
   const { 
     pokemonReducer,
@@ -40,15 +35,8 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
     pokemon: 'I Hate Pokemon, Testing Redux'
   }
 
-  // testingReducer('im awesome')
-  // dispatch(testingReducer('im awesome'))
-  // dispatch(fetchPokemon())
-  
-  // console.log(pokemonReducer)
-  // Storing navWords in useState to be used in my nav
   const [navWording, setNavWording] = useState(navWords.home)
 
-  // Returning my Website
   return (
     <div className='BodyAuty'>
         <div className='Navigate'>
@@ -65,10 +53,10 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
             <NavLink to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</NavLink>
             <NavLink to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)}>Cooking</NavLink>
             <NavLink to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</NavLink> */}
-
-            {/* <Link to='/gaming/1'>Test</Link>
-            <Link to='/gaming/2'>Test</Link>
-            <Link to='/gaming/3'>Test</Link> */}
+            
+                        {/* <Link to='/gaming/1'>Test</Link>
+                        <Link to='/gaming/2'>Test</Link>
+                        <Link to='/gaming/3'>Test</Link> */}
           </nav>
         </div>
 
