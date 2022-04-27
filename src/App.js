@@ -1,19 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import Home from './Home Components/Home';
-import { NavLink, Routes, Route, BrowserRouter}from 'react-router-dom';
+import { NavLink, Routes, Route, BrowserRouter, Link}from 'react-router-dom';
 import { GrabPokemon } from './Redux Related/Action-Creators';
 import { Provider, connect, useDispatch } from 'react-redux';
 import { configureStore, createAction } from '@reduxjs/toolkit';
 import PokemonReducer from './Redux Related/Reducers'
 import { fetchPokemon, grabbingPokemons, testingReducer, testAgain } from './Redux Related/Reducers';
-// import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
-
-// export const storing = configureStore({
-//   reducer: {
-//     pokemon: PokemonReducer,
-//   }
-// })
+// import * as actionCreators from './Redux Related/Reducers'
+import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
 // Add moving png jpeg images on my webpage
@@ -27,12 +21,16 @@ import { fetchPokemon, grabbingPokemons, testingReducer, testAgain } from './Red
 
 //  function App (props) {
  function App (props) {
-  const { pokemonReducers } = props
+  const { 
+    pokemonReducer,
+   } = props
   const dispatch = useDispatch()
 
  useEffect(()=>{
   dispatch(grabbingPokemons())
  },[])
+
+ console.log(pokemonReducer)
 
   // Storing Welcome words in a Variable
   const navWords = {
@@ -46,24 +44,28 @@ import { fetchPokemon, grabbingPokemons, testingReducer, testAgain } from './Red
   // dispatch(testingReducer('im awesome'))
   // dispatch(fetchPokemon())
   
-  console.log(pokemonReducers)
+  // console.log(pokemonReducer)
   // Storing navWords in useState to be used in my nav
   const [navWording, setNavWording] = useState(navWords.home)
 
   // Returning my Website
   return (
-    // <Provider store={storing} >
-    // <BrowserRouter>
     <div className='BodyAuty'>
         <div className='Navigate'>
           <div className='Nav-Intro'>
             <p>{navWording}</p>
           </div>
           <nav>
-            {/* <Link to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</Link>
+            <Link to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</Link>
             <Link to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</Link>
             <Link to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)}>Cooking</Link>
-            <Link to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</Link> */}
+            <Link to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</Link>
+
+            {/* <NavLink to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</NavLink>
+            <NavLink to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</NavLink>
+            <NavLink to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)}>Cooking</NavLink>
+            <NavLink to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</NavLink> */}
+
             {/* <Link to='/gaming/1'>Test</Link>
             <Link to='/gaming/2'>Test</Link>
             <Link to='/gaming/3'>Test</Link> */}
@@ -71,36 +73,20 @@ import { fetchPokemon, grabbingPokemons, testingReducer, testAgain } from './Red
         </div>
 
         <Routes>
+          <Route path='/pokemon/*' element={<Pokemon pokemon={pokemonReducer} />}/>
+          <Route path='/cooking' element={<Cooking/>}/>
+          <Route path='/gaming/:viral' element={<Games/>}/>
+          <Route path='/gaming' element={<Gaming/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
-
-
-        {/* <Switch>
-          <Route path='/pokemon'>
-            <Pokemon pokemon={fetchPokemon} />
-          </Route>
-          <Route path='/cooking'>
-            <Cooking/>
-          </Route>
-          <Route path='/gaming/:viral'>
-            <Games/>
-          </Route>
-          <Route path='/gaming'>
-            <Gaming/>
-          </Route>
-          <Route path='/'>
-            <Home/>
-          </Route>
-        </Switch> */}
     </div>
-    // {/* </BrowserRouter>
-    // </Provider> */}
   );
 }
 
 function GrabbingStorage(state){
+  console.log(state)
   return {
-    pokemonReducers: state
+    pokemonReducer: state.pokemon
   }
 }
 
