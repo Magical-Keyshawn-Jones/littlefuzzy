@@ -1,11 +1,11 @@
-import axios from 'axios';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Ivysaur from '../Images/Pokemon/ivysaur.png';
 import Charmander from '../Images/Pokemon/charmander.png';
 import Bulbasaur from '../Images/Pokemon/Bulbasaur.png';
 
 export function PokemonShowCase (props) {
+
+    const { pokemonInfo } = props
 
     return ( 
 
