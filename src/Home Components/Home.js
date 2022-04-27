@@ -1,8 +1,12 @@
 import ReactPlayer from 'react-player';
 import Silly from '../Form Components/Silly'
+import { connect } from 'react-redux';
 // Make form and afterwards make a button to get rid of the form
 
-export function Home () {
+// export function Home () {
+    function Home (props) {
+
+        // const { something } = props
 
     // Making Home Video Player component
     const homeVideo = 
@@ -38,4 +42,10 @@ export function Home () {
     )
 }
 
-// export default Home;
+function GrabbingStorage(state){
+    return {
+        something: state
+    }
+}
+
+export default connect (GrabbingStorage,{})(Home)

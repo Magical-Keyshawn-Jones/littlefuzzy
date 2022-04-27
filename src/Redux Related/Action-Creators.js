@@ -1,15 +1,13 @@
 import axios from "axios";
-import { GetPokemon } from "./Action-Types";
-
-export function pokemonData (data) {
-    return {type: GetPokemon, payload: data}
-}
+import { fetchPokemon } from "./Reducers";
 
 export function GrabPokemon () {
    return function (dispatch) {
     axios.get('https://pokeapi.co/api/v2/pokemon/')
     .then(res =>{
-        dispatch(pokemonData(res.data.results))
+        console.log(res.data)
+        // dispatch(fetchPokemon(res.data.results))
+        dispatch(fetchPokemon(res.data.results))
     })
     .catch(err => console.log('error!!!', err))
    }
