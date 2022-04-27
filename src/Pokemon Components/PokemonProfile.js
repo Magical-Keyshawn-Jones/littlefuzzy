@@ -1,14 +1,14 @@
-import { useHistory } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import { connect } from "react-redux"
-import { useState } from 'react';
+
 function PokemonProfile (props) {
     const { pokemon } = props
     const path = useHistory()
-    const [newPokemon, setNewPokemon] = useState(pokemon)
-
+    const { pokemonId } = useParams()
     
     return (
         <div onClick={()=>{path.push('/pokemon')}}>
+            <h1 className='pokemonHeading'>Welcome To Hate That {pokemon[pokemonId].name}!!!</h1>
             Insider Pokemon Here
         </div>
     )

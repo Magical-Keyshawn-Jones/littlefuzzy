@@ -1,10 +1,12 @@
 
-export function Gaming () {
+export function Gaming (props) {
+   
+    const { words } = props
     
     return (
         <div className='GamingHome'>
             <div className='GamingTitle'>
-                <h1>I love Gaming Yall!!!</h1>
+                <h1>I love Gaming and {words} Yall!!!</h1>
             </div>
         </div>
     )

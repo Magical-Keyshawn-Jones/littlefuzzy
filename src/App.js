@@ -49,7 +49,7 @@ function App (props) {
         </nav>
       </div>
 
-      <Switch>
+      {/* <Switch>
         <Route path='/pokemon'>
           <Pokemon pokemon={fetchPokemon} />
         </Route>
@@ -65,7 +65,7 @@ function App (props) {
         <Route path='/'>
           <Home/>
         </Route>
-      </Switch>
+      </Switch> */}
    </div>
   );
 }
