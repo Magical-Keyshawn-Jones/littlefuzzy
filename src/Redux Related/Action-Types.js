@@ -1,1 +1,0 @@
-export const GetPokemon = 'FETCH_POKEMON'

@@ -1,34 +1,55 @@
 import axios from 'axios'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-// This Grabs the pokemon
-export const grabbingPokemons = createAsyncThunk('pokemon/grabbingPokemon', async (filler, { dispatch }) => {
-    return await axios.get('https://pokeapi.co/api/v2/pokemon/')
+// This Grabs pokemon
+export const  fetchPokemon = createAsyncThunk('pokemon/grabbingPokemon', async () => {
+
+     const response = await axios.get('https://pokeapi.co/api/v2/pokemon/')
     .then(res=>{
-        // console.log(res.data.results)
-        dispatch(testingReducer(res.data.results))
+        return res.data.results
     })
-    .catch(err=>{return console.log('error!', err)})
+    .catch(err=> console.log('error!', err) )
+    return response
 })
 
+// Storing Pokemon Data
 const pokemonSlice = createSlice({
     name: 'pokemon',
     initialState: 'Something Kewl',
-    reducers: {
-        fetchPokemon (state, action) {
-            axios.get('https://pokeapi.co/api/v2/pokemon/')
-            .then(res=>{
-                console.log(res.data)
-                return state = res.data.results
-            })
-            .catch(err=>{console.log('error!', err)})
-            return console.log(state)
-        },
-        testingReducer (state, action) {
-            return state = action.payload
-        },
+    
+    extraReducers: builder => {
+        builder
+        .addCase(fetchPokemon.pending, (state, action) => {
+            return state = true
+        })
+        .addCase(fetchPokemon.fulfilled, (state, action) => {
+           return  state =  action.payload
+        }) 
     }
 })
 
-export const { fetchPokemon, testingReducer} = pokemonSlice.actions
-export default pokemonSlice.reducer 
+// Helper reducer for pokemonSlice to prevent refresh Error
+const loadingSlice = createSlice({
+    name: 'loadingSlice',
+    initialState: true,
+    reducers: {
+        loadingThat (state, action) {
+            return state = action.payload
+        }
+    },
+    extraReducers: builder => {
+        builder
+        .addCase(fetchPokemon.pending, (state, action) => {
+            return state = true
+        })
+        .addCase(fetchPokemon.fulfilled, (state, action)=> {
+            return state = false
+        })
+    }
+})
+
+export const { setPokemon, loading } = pokemonSlice.actions
+export {
+    pokemonSlice,
+    loadingSlice,
+}

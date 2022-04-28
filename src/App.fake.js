@@ -2,11 +2,12 @@ import App from "./App"
 import { Provider } from "react-redux"
 import { BrowserRouter } from "react-router-dom"
 import { configureStore } from '@reduxjs/toolkit';
-import PokemonReducer from './Redux Related/Reducers'
+import { pokemonSlice, loadingSlice } from './Redux Related/Reducers'
 
 export const storage = configureStore({
     reducer: {
-      pokemon: PokemonReducer,
+      pokemon: pokemonSlice.reducer,
+      loading: loadingSlice.reducer,
     }
   })
 

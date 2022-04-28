@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link}from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
-import { grabbingPokemons } from './Redux Related/Reducers';
+import { fetchPokemon } from './Redux Related/Reducers';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
@@ -17,15 +17,14 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 
  function App (props) {
   const { 
-    pokemonReducer,
+    pokemon,
+    loading
    } = props
   const dispatch = useDispatch()
 
  useEffect(()=>{
-  dispatch(grabbingPokemons())
+  dispatch(fetchPokemon())
  },[])
-
- console.log(pokemonReducer)
 
   // Storing Welcome words in a Variable
   const navWords = {
@@ -38,7 +37,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
   const [navWording, setNavWording] = useState(navWords.home)
 
   return (
-    <div className='BodyAuty'>
+    <div className='BodyAuty' >
         <div className='Navigate'>
           <div className='Nav-Intro'>
             <p>{navWording}</p>
@@ -61,7 +60,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
         </div>
 
         <Routes>
-          <Route path='/pokemon/*' element={<Pokemon pokemon={pokemonReducer} />}/>
+          <Route path='/pokemon/*' element={<Pokemon pokemon={pokemon} loading={loading} />}/>
           <Route path='/cooking' element={<Cooking/>}/>
           <Route path='/gaming/:viral' element={<Games/>}/>
           <Route path='/gaming' element={<Gaming/>}/>
@@ -72,9 +71,9 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 }
 
 function GrabbingStorage(state){
-  console.log(state)
   return {
-    pokemonReducer: state.pokemon
+    pokemon: state.pokemon,
+    loading: state.loading
   }
 }
 
