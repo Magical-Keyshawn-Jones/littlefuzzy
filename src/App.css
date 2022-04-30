@@ -58,13 +58,16 @@ table {
 
 .Navigate {
   display: flex;
+  position: relative;
   justify-content: right;
   align-items: center;
   font-size: 2.6rem;
   background-image: url(./Images/App&Home/peace-of-landscape-oa.jpg);
   background-size: auto;
   height: 5rem;
-  /* position: fixed; */
+  /* Controls which element goes on top */
+  /* Dependant on position: relative */
+  z-index: 1;
 }
 
 .Nav-Intro {
@@ -244,4 +247,44 @@ table {
 .pokemonProfileImage img{
   height: 100%;
   width: auto;
+}
+
+/* Cooking Images */
+.cookingProfileImage {
+  display: inline-block;
+  position: relative;
+  /* Directions are dependent on position: relative */
+  /* Direction are going AWAY from their current direction */
+  /* left: 10%; */
+  /* Transform is a second way to move a container */
+  /* transform: translateX(-100%); */
+  height: auto;
+  width: 35%;
+}
+
+.cookingProfileImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.cookingHomePage {
+  height: 100%;
+  width: 100%;
+}
+
+.cookingHomePage::before {
+  /* Best Background Image setup */
+  content: '';
+  display: block;
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url('./Images/Cooking/Background_Cake.jpg');
+  background-size: 100% 100% ;
+  background-repeat: no-repeat;
+  opacity: .6;
+  /* background-position: 50% 0; */
+  height: 100%;
+  width: 100%;
 }
