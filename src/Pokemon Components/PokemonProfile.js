@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 function PokemonProfile (props) {
     const { pokemon, loading, pokemonImages } = props
     const { pokemonId } = useParams()
-    console.log(pokemon[pokemonId])
     
     return (
         <div onClick={()=>{}}>
