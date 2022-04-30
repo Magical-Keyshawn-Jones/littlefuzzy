@@ -9,6 +9,7 @@ function PokemonProfile (props) {
         <div onClick={()=>{}}>
             <h1 className='pokemonHeading'>Welcome To Hate That {pokemon[pokemonId].name}!!!</h1>
             Insider Pokemon Here
+            
         </div>
     )
 }

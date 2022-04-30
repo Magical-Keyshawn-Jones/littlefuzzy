@@ -16,11 +16,10 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
  function App (props) {
-  const { 
-    pokemon,
-    loading
-   } = props
+  const { pokemon,loading } = props
+
   const dispatch = useDispatch()
+  const something = 'I dont Care'
 
  useEffect(()=>{
   dispatch(fetchPokemon())
@@ -64,7 +63,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
           <Route path='/cooking' element={<Cooking/>}/>
           <Route path='/gaming/:viral' element={<Games/>}/>
           <Route path='/gaming' element={<Gaming/>}/>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Home something={something} />}/>
         </Routes>
     </div>
   );
@@ -73,7 +72,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 function GrabbingStorage(state){
   return {
     pokemon: state.pokemon,
-    loading: state.loading
+    loading: state.loading,
   }
 }
 

@@ -2,8 +2,9 @@ import ReactPlayer from 'react-player';
 import Silly from '../Form Components/Silly'
 // Make form and afterwards make a button to get rid of the form
 
-export function Home () {
+export function Home ( props ) {
 
+    const { something } = props
     // Making Home Video Player component
     const homeVideo = 
         <div className='HomePlayer'>
@@ -13,7 +14,7 @@ export function Home () {
     // About Me Component
     const aboutMe = 
         <div className='aboutMe'>
-             <h1 className='aboutHeader'>About Me</h1>
+             <h1 className='aboutHeader'>About Me {something}</h1>
             {/* <p>First thing everyone should know is that my nickname is <span className='Doorknob'>Doorknob</span> and I love the color <span className='Pink'>Pink</span>.
                 I have a passion for God, Video Games, and Coding. I love acting silly and 
                 making people laugh. <span className='PeoplePerson'>100% People Person!</span>
