@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link}from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
-import { fetchPokemon } from './Redux Related/Reducers';
+import { fetchPokemon, setLoading } from './Redux Related/Reducers';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
@@ -16,7 +16,10 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
  function App (props) {
-  const { pokemon,loading } = props
+  const { 
+    pokemon,
+    loading,
+   } = props
 
   const dispatch = useDispatch()
   const something = 'I dont Care'
@@ -60,7 +63,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 
         <Routes>
           <Route path='/pokemon/*' element={<Pokemon pokemon={pokemon} loading={loading} />}/>
-          <Route path='/cooking' element={<Cooking/>}/>
+          <Route path='/cooking' element={<Cooking />}/>
           <Route path='/gaming/:viral' element={<Games/>}/>
           <Route path='/gaming' element={<Gaming/>}/>
           <Route path='/' element={<Home something={something} />}/>

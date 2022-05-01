@@ -33,7 +33,7 @@ const loadingSlice = createSlice({
     name: 'loadingSlice',
     initialState: true,
     reducers: {
-        loadingThat (state, action) {
+        setLoading (state, action) {
             return state = action.payload
         }
     },
@@ -48,7 +48,8 @@ const loadingSlice = createSlice({
     }
 })
 
-export const { setPokemon, loading } = pokemonSlice.actions
+export const { setPokemon } = pokemonSlice.actions
+export const { setLoading } = loadingSlice.actions
 export {
     pokemonSlice,
     loadingSlice,
