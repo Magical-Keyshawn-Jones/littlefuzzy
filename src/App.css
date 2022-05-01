@@ -254,12 +254,28 @@ table {
   display: flex;
   position: relative;
   /* justify-content: space-between; */
-  height: 40%;
+  height: 55%;
+  /* height: 40rem; */
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.profileContainer h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.profileContainer p {
+  font-size: 3rem;
 }
 
 .cookingProfileImage {
-  height: 100%;
-  width: 50%;
+  /* width: 50%;  */
+  height: 70%;
   /* Directions are dependent on position: relative */
   /* Direction are going AWAY from their current direction */
   /* left: 10%; */
@@ -288,28 +304,40 @@ table {
   background-image: url('./Images/Cooking/Background_Cake.jpg');
   background-size: 100% 100% ;
   background-repeat: no-repeat;
-  opacity: .2;
+  opacity: .1;
   /* background-position: 50% 0; */
   height: 100%;
   width: 100%;
 }
 
-/* Testing Slider/ Carousel */
-.caroselContainer {
+.carouselContainer {
   display: flex;
-  justify-content: right;
+  flex-direction: column;
   align-items: center;
+  padding-top: 2rem;
+}
+
+.carouselContainer h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.carouselContainer p {
+  font-size: 2rem;
+}
+
+.carouselContainer span {
+  color: purple;
 }
 
 .cookingCarousel {
   display: flex;
-  position: relative;
-  top: 15%;
-  left: 13%;
   justify-content: center;
   align-items: center;
   height: 70%;
   width: 75%;
+  position: relative;
+  top: 0;
 }
 
 .slide {

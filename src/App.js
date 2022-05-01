@@ -22,7 +22,6 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
    } = props
 
   const dispatch = useDispatch()
-  const something = 'I dont Care'
 
  useEffect(()=>{
   dispatch(fetchPokemon())
@@ -32,7 +31,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
   const navWords = {
     home: 'Welcome to my Home!',
     gaming: 'Super Awesome Gaming Area!',
-    cooking: 'Ruthy-G Cooking Shout out!',
+    cooking: 'Cooking Shout out!',
     pokemon: 'I Hate Pokemon, Testing Redux'
   }
 
@@ -66,7 +65,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
           <Route path='/cooking' element={<Cooking />}/>
           <Route path='/gaming/:viral' element={<Games/>}/>
           <Route path='/gaming' element={<Gaming/>}/>
-          <Route path='/' element={<Home something={something} />}/>
+          <Route path='/' element={<Home/>}/>
         </Routes>
     </div>
   );

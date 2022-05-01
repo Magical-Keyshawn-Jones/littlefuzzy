@@ -44,8 +44,13 @@ export function Cooking (props) {
     return (
         <div className='cookingHomePage'>
             <div className='cookingTopLevelContainer'>
-                <div className='cookingProfileImage'>
-                    <img src={starButterFly} alt='Star Butterfly' />
+                <div className='profileContainer'>
+                    <div className='cookingProfileImage'>
+                        <img src={starButterFly} alt='Star Butterfly' />
+                    </div>
+                    <h1>Contact Info</h1>
+                    <br/>
+                    <p>Just Call Me</p>
                 </div>
                 <div className='carouselContainer'>
                     <div className='cookingCarousel'>
@@ -55,6 +60,11 @@ export function Cooking (props) {
                         </div>
                         <div id='cookingArrow' className='cookingArrowRight' onClick={()=>{rightClickHandler()}}></div>
                     </div>
+                    <h1>About Me</h1>
+                    <p>Hi! <span>I'm Queen WhateverWannaBe</span>. I absolutely <span>love</span> cooking! Since I was little I always helped my mom cook and it was a lot of fun. 
+                        The pictures above are cakes I've done in the past and each one has an awesome story and recipe. If you need someone to bake and <span>majestic</span> cake 
+                        for you, family, or business, then I'm your girl. 
+                    </p>
                 </div>
             </div>
         </div>
