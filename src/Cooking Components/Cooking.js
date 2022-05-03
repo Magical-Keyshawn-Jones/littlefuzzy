@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {
     caroselImages,
     starButterFly,
@@ -46,25 +46,75 @@ export function Cooking (props) {
             <div className='cookingTopLevelContainer'>
                 <div className='profileContainer'>
                     <div className='cookingProfileImage'>
-                        <img src={starButterFly} alt='Star Butterfly' />
+                        <img src={starButterFly} alt='Star Butterfly'/>
                     </div>
-                    <h1>Contact Info</h1>
                     <br/>
-                    <p>Just Call Me</p>
+                    <p>Queen of Bakery</p>
                 </div>
                 <div className='carouselContainer'>
                     <div className='cookingCarousel'>
                         <div id='cookingArrow' className='cookingArrowLeft' onClick={()=>{leftClickHandler()}}></div>
                         <div className='slide'>
-                            <img src={caroselImages[current]} alt='Slideshow images' />
+                            <img src={caroselImages[current]} alt='Slideshow images'/>
                         </div>
                         <div id='cookingArrow' className='cookingArrowRight' onClick={()=>{rightClickHandler()}}></div>
                     </div>
                     <h1>About Me</h1>
-                    <p>Hi! <span>I'm Queen WhateverWannaBe</span>. I absolutely <span>love</span> cooking! Since I was little I always helped my mom cook and it was a lot of fun. 
+                    <p>
+                        Hi! <span>I'm Queen WhateverWannaBe</span>. I absolutely <span>love</span> cooking! Since I was little I always helped my mom cook and it was a lot of fun. 
                         The pictures above are cakes I've done in the past and each one has an awesome story and recipe. If you need someone to bake and <span>majestic</span> cake 
-                        for you, family, or business, then I'm your girl. 
+                        for you, family, or business, then I'm your girl! 
                     </p>
+                </div>
+            </div>
+            <div className='cakeInfoContainer'>
+                <div className='cakeParagraphContainer'>
+                    <p>
+                        I love cooking with people also!
+                    </p>
+                </div>
+                <div className='cakeInfoImage'>
+                    <img src={christianCake} alt='Christian Cake' />
+                </div>
+            </div>
+            <div className='cakeInfoContainer'>
+                <div className='cakeInfoImage'>
+                    <img src={turquoiseCake} alt='Turquoise Cake' />
+                </div>
+                <div className='cakeParagraphContainer'>
+                    <p>
+                        I love cooking with people also!
+                    </p>
+                </div>
+            </div>
+            <div className='cakeInfoContainer'>
+                <div className='cakeParagraphContainer'>
+                    <p>
+                        I love cooking with people also!
+                    </p>
+                </div>
+                <div className='cakeInfoImage'>
+                    <img src={princessCake} alt='Princess Cake' />
+                </div>
+            </div>
+            <div className='cakeInfoContainer'>
+                <div className='cakeInfoImage'>
+                    <img src={foodCakes} alt='Food Cake' />
+                </div>
+                <div className='cakeParagraphContainer'>
+                    <p>
+                        I love cooking with people also!
+                    </p>
+                </div>
+            </div>
+            <div className='cakeInfoContainer'>
+                <div className='cakeParagraphContainer'>
+                    <p>
+                        I love cooking with people also!
+                    </p>
+                </div>
+                <div className='cakeInfoImage'>
+                    <img src={weddingCake} alt='Wedding Cake' />
                 </div>
             </div>
         </div>

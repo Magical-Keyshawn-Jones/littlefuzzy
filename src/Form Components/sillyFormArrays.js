@@ -18,7 +18,7 @@ const person = [
  'Grandfather', 'Grandmother', 'Father', 'Mother', 'Uncle', 'Aunt', 
  'Sister-in-Law', 'Brother', 'Sister', 'Cousin' , 'Nephew', 'Niece', 
  'Son', 'Grandson', 'Granddaughter', 'Daughter-in-Law', 'Stepmother', 
- 'Stepson', 'Stepdaughter', 'Stepsister', 'Stepbrother', 'Halt-brother', 
+ 'Stepson', 'Stepdaughter', 'Stepsister', 'Stepbrother', 'Half-brother', 
  'Half-sister', 'Grandparents', 'Children', 'Brother-in-Law', 'Stepfather'   
 ]
 
