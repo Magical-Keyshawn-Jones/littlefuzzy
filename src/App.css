@@ -255,22 +255,19 @@ table {
 .profileContainer {
   display: flex;
   flex-direction: column;
-  width: 40%;
-}
-
-.profileContainer h1 {
-  font-size: 4vw;
-  text-align: center;
+  width: 30%;
+  min-width: fit-content;
 }
 
 .profileContainer p {
-  font-size: 2.7vw;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 .cookingProfileImage {
   /* height: 70%; */
-  height: 65vh;
+  height: 30rem;
+  width: 27rem;
 }
 
 .cookingProfileImage img {
@@ -312,8 +309,7 @@ table {
 }
 
 .carouselContainer p {
-  /* font-size: 2.5rem; */
-  font-size: 40px;
+  font-size: 2rem;
 }
 
 .carouselContainer span {
@@ -324,8 +320,8 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  width: 100vh;
+  height: 25rem;
+  width: 40rem;
   position: relative;
   top: 0;
 }
@@ -362,7 +358,7 @@ table {
 .cakeInfoContainer {
   position: relative;
   display: flex;
-  height: 40vh;
+  height: 60vh;
 }
 
 .cakeInfoContainer img {
@@ -370,18 +366,19 @@ table {
   height: 100%;
 }
 
+.cakeInfoImage {
+  width: 100vh;
+  height: 50vh;
+  /* height: 25rem;
+  width: 40rem; */
+}
 .cakeParagraphContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 .cakeParagraphContainer p {
   padding-left: 2rem;
-}
-
-.cakeInfoImage {
-  width: 60vh;
-  height: 36vh;
 }
