@@ -28,7 +28,7 @@ export function Home ( props ) {
         </div>
     
     return (
-        <div>
+        <div className='Home'>
             <div className='HomeSheep'>
                 {homeVideo}
                 {aboutMe}

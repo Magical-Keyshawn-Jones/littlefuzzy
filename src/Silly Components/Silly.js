@@ -13,16 +13,20 @@ import { useState } from 'react'
 function Silly () {
 
     const [personNumber, setPersonNumber] = useNumber(person)
-    const [movementNumbers, setMovementNumbers] = useNumber(movementVerbs)
+    const [movementNumber, setMovementNumber] = useNumber(movementVerbs)
+    const [bestPersonNumber, setBestPersonNumber] = useState(null)
+    const [bestMovementNumber, setBestMovementNumber] = useState(null)
 
     // initial Form Values
     const initialSillyValues = {
-        name: ''
+        name: '',
+        animal: '',
     }
 
     // initial Error Form Values
     const errorSillyValues = {
-        name: ''
+        name: '',
+        animal: '',
     }
 
     // Making States for initial Silly and Error Values
@@ -33,8 +37,8 @@ function Silly () {
     function validator (name, value) {
         yup.reach(sillyTester, name)
         .validate(value)
-        .then(()=> setErrorValues({...silly, [name]: ''}))
-        .catch(err => setErrorValues({...silly, [name]: err.errors[0]})) //err.errors is a completely unrelated variable. !Always! use errors to show error!
+        .then(()=> setErrorValues({...errorValues, [name]: ''}))
+        .catch(err => setErrorValues({...errorValues, [name]: err.errors[0]})) //err.errors is a completely unrelated variable. !Always! use errors to show error!
     }
 
     // change function for OnChangeHandler
@@ -47,25 +51,34 @@ function Silly () {
     }
 
     // Making custom hook for onChange
-function useInput  (initialValue) {
-    const [value, setValue] = useState(initialValue)
-    function handleChanges (event) {
-        
-        // Grabbing values
-        const { name, type, checked, value } = event.target
+    function useInput  (initialValue) {
+        const [value, setValue] = useState(initialValue)
+        function handleChanges (event) {
+            
+            // Grabbing values
+            const { name, type, checked, value } = event.target
 
-        // To grab correct checkbox values
-        const checkboxValue = type === 'checkbox' ? checked : value
+            // To grab correct checkbox values
+            const checkboxValue = type === 'checkbox' ? checked : value
 
-        change(name, checkboxValue)
+            change(name, checkboxValue)
+        }
+
+        return [value, setValue, handleChanges]
     }
 
-    return [value, setValue, handleChanges]
-}
+    function onSubmitHandler (event) {
+        event.preventDefault()
+
+        setBestPersonNumber(Math.floor(Math.random() * person.length))
+        setBestMovementNumber(Math.floor(Math.random() * movementVerbs.length))
+
+        setSilly(initialSillyValues)
+    }
 
     return (
        <div className='SillyFormHolder'>
-            <form className='SillyForm'>
+            <form className='SillyForm' onSubmit={(event)=>{onSubmitHandler(event)}}>
                 <label>
                     Name
                     <input 
@@ -78,10 +91,27 @@ function useInput  (initialValue) {
                     />
                     {errorValues.name}
                 </label>
+
+                <label>
+                    Animal
+                    <input 
+                    className= 'testInput'
+                    type='text'
+                    name='animal'
+                    placeholder='Type Animal here'
+                    value={silly.animal}
+                    onChange={handleSilly}
+                    />
+                    {errorValues.animal}
+                    {/* {console.log(errorValues.animal)} */}
+                </label>
                 <button>Submit</button>
             </form>
             <div className='SillyParagraph'>
-                <p>{`My ${person[personNumber]} has ${movementVerbs[movementNumbers]} towards polar bears`}</p>
+                <p>
+                    {`My ${person[bestPersonNumber || personNumber]} 
+                    has ${movementVerbs[bestMovementNumber || movementNumber]} towards polar bears`}
+                </p>
             </div>
        </div>
     )

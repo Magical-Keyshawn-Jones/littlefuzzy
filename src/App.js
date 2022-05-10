@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link}from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
-import { fetchPokemon, setLoading } from './Redux Related/Reducers';
+import { fetchPokemon } from './Redux Related/Reducers';
 import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'

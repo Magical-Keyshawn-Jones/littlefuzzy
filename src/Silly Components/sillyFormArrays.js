@@ -33,13 +33,13 @@ function sillyRandomNumber (number) {
 function useNumber (array) {
   
   // Storing array.length in state
-  const [arrayNumber, setArrayNumber]= useState(array.length)
+  const [arrayNumber, setArrayNumber] = useState(array.length)
 
   // Storing random number inside a variable to prevent infinite loop
   const sillyRandomNumbers = sillyRandomNumber(arrayNumber)
 
   // Storing random number in state
-  const [randomNumber, setRandomNumber] =useState(sillyRandomNumbers)
+  const [randomNumber, setRandomNumber] = useState(sillyRandomNumbers)
 
   // Returning the random number and Set arrayNumber (setRandomNumber will not be used)
   return [randomNumber, setArrayNumber]

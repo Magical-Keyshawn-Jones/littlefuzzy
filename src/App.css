@@ -42,6 +42,12 @@ table {
 	border-spacing: 0;
 }
 
+/*
+  Key for finding Style Sections
+  `${Name of Component} Decorations`
+  Examples: Silly Decorations, Pokemon Decorations
+ */
+
 /* Body Decorations */
 .BodyAuty {
   height: 100rem;
@@ -78,6 +84,12 @@ table {
 
 /* Home Decorations!!! */
 
+.Home {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
 .HomeSheep {
   display: flex;
   width: 100%;
@@ -106,6 +118,7 @@ table {
   margin-left: 2rem;
   margin-right: 2rem;
   font-size: 5rem;
+  color: white;
   position: relative;
 
 }
@@ -155,12 +168,31 @@ table {
 
 /* SillyForm Decorations for Home Component */
 .SillyFormHolder {
-  display: inline-block;
-  margin: 0 5rem;
+  display: flex;
+  height: 62%;
+  width: 66%;
+  max-height: 62%;
+  max-width: 66%;
 }
 
 .SillyForm {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.SillyForm ::placeholder {
+  color: black;
+}
+
+.SillyForm button {
+  width: min-content;
+}
+
+.SillyForm label {
+  margin-bottom: 1rem;
+  color: white;
+  width: min-content;
 }
 
 .testInput::after {
@@ -175,7 +207,9 @@ table {
 }
 
 .SillyParagraph p {
-  display: inline;
+  /* display: inline; */
+  color: aqua;
+  font-size: 3rem;
 }
 
 /* Gaming Decorations */
