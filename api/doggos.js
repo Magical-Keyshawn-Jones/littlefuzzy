@@ -19,4 +19,13 @@ module.exports = {
     async findAll() {
         return dogs
     },
+
+    async delete(id) {
+        // Testing if Dog exist
+        const dog = dogs.find(doggo => doggo.id == id)
+        if (!dog) return null
+
+        dogs = dogs.filter(doggo => doggo.id != id)
+        return dogs
+    }
 }

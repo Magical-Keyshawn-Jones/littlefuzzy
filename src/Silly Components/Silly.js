@@ -103,7 +103,6 @@ function Silly () {
                     onChange={handleSilly}
                     />
                     {errorValues.animal}
-                    {/* {console.log(errorValues.animal)} */}
                 </label>
                 <button>Submit</button>
             </form>

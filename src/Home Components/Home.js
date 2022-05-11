@@ -14,15 +14,23 @@ export function Home ( props ) {
     const aboutMe = 
         <div className='aboutMe'>
              <h1 className='aboutHeader'>About Me</h1>
-            {/* <p>First thing everyone should know is that my nickname is <span className='Doorknob'>Doorknob</span> and I love the color <span className='Pink'>Pink</span>.
-                I have a passion for God, Video Games, and Coding. I love acting silly and 
-                making people laugh. <span className='PeoplePerson'>100% People Person!</span>
-            </p> */}
-            <ol className='aboutMeListHolder'>
-                <li className='AboutMeList'>My nickname is <span className='Doorknob'>Doorknob</span></li>
-                <li className='AboutMeList'>I love the color <span className='Pink'>Pink</span></li>
+             {/* <p>
+                 My nickname is Doorknob. I have a passion for God, video games, and coding. I am pretty skilled at
+                 <br/>
+                 Javascript, Html, CSS, and React so far
+             </p> */}
+            {/* <ol className='aboutMeListHolder'>
+                <li className='AboutMeList'>My nickname is <span className='pink'>Doorknob</span></li>
+                <li className='AboutMeList'>I love the color <span className='pink'>pink</span></li>
                 <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
                 <li className='AboutMeList'>I love acting silly and making people laugh</li>
+                <li className='AboutMeList'><span className='PeoplePerson'>100% People Person!</span></li>
+            </ol> */}
+            <ol className='aboutMeListHolder'>
+                <li className='AboutMeList'>My nickname is <span className='pink'>Doorknob</span></li>
+                <li className='AboutMeList'>I love the color <span className='pink'>pink</span></li>
+                <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
+                <li className='AboutMeList'>I am skilled at Javascript, Html, CSS, React</li>
                 <li className='AboutMeList'><span className='PeoplePerson'>100% People Person!</span></li>
             </ol>
         </div>
