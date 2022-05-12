@@ -50,3 +50,27 @@
     /* display: inline; */
     font-size: 3rem;
   }
+
+  /* Responsive Design */
+  @media (max-width: 400px), (max-height: 916) {
+    .SillyFormHolder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 58%;
+      max-width: 66%;
+    }
+
+    .SillyForm {
+      position: relative;
+      left: 20%;
+      margin-left: .8rem;
+      padding: 1rem 1.8rem;
+    }
+
+    .SillyParagraph {
+      position: relative;
+      left: 30%;
+      margin-top: 2rem;
+    }
+  }
