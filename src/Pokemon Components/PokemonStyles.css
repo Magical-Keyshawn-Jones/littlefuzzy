@@ -1,0 +1,40 @@
+/* Pokemon Decorations */
+
+/* PokemonShowcase Decorations */
+.pokemonHeading {
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  .pokemonShowcaseImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .pokemonShowcaseImage div {
+    height: 43vh;
+    width: auto;
+  }
+  
+  .pokemonShowcaseImage img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pokemonShowcaseLinkTo {
+    max-height: 43vh;
+  } 
+  
+  /* PokemonProfile Decorations */
+  .pokemonProfileImage {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: auto;
+  }
+  
+  .pokemonProfileImage img{
+    height: 100%;
+    width: auto;
+  }

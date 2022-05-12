@@ -1,12 +1,13 @@
-import sillyTester from "./SillyValidation";
 // Reference SillyForm Array to find Specific Words
+import sillyTester from "./SillyValidation";
+import './SillyStyles.css'
 import { useNumber, person, movementVerbs } from "./sillyFormArrays";
 import * as yup from 'yup';
 import { useState } from 'react'
 
 // Make a cool slider
-// Dropdown options
-// Radio
+// Add Dropdown options 'Married' or 'Soon To be Married' or 'Eventually Get Married' or 'Forever Alone'
+// Add Radio for 'Dead' or 'Alive'
 // Customize to validation form 
 // use cypress
 

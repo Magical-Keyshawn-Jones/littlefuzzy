@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { connect } from "react-redux"
+import './PokemonStyles.css'
 
 function PokemonProfile (props) {
     const { pokemon, loading, pokemonImages } = props

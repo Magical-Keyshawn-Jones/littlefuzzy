@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './CookingStyles.css'
 import {
     caroselImages,
     starButterFly,

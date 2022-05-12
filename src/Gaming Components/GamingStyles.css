@@ -1,0 +1,25 @@
+/* Gaming Decorations */
+
+.GamingHome {
+    position: relative;
+  }
+  
+  .GamingHome::before {
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: .6;
+    background-position: 50% 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../Images/Gaming/God_of_War.jpg);
+    background-repeat: no-repeat;
+  }
+  
+  .GamingTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+  }

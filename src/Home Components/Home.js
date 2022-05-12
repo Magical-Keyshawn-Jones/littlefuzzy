@@ -1,5 +1,6 @@
 import ReactPlayer from 'react-player';
 import Silly from '../Silly Components/Silly'
+import './HomeStyles.css'
 // Make form and afterwards make a button to get rid of the form
 
 export function Home ( props ) {
@@ -31,7 +32,7 @@ export function Home ( props ) {
                 <li className='AboutMeList'>I love the color <span className='pink'>pink</span></li>
                 <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
                 <li className='AboutMeList'>I am skilled at Javascript, Html, CSS, React</li>
-                <li className='AboutMeList'><span className='PeoplePerson'>100% People Person!</span></li>
+                <li className='AboutMeList'><span className='bold'>100% People Person!</span></li>
             </ol>
         </div>
     

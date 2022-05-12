@@ -1,0 +1,137 @@
+/* Cooking Images */
+.cookingTopLevelContainer {
+    display: flex;
+    position: relative;
+    height: 55%;
+  }
+  
+  .profileContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: fit-content;
+  }
+  
+  .profileContainer p {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .cookingProfileImage {
+    /* height: 70%; */
+    height: 30rem;
+    width: 27rem;
+  }
+  
+  .cookingProfileImage img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cookingHomePage {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cookingHomePage::before {
+    /* Best Background Image setup */
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url('../Images/Cooking/Background_Cake.jpg');
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    opacity: .1;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+  }
+  
+  .carouselContainer h1 {
+    text-align: center;
+    font-size: 4rem;
+  }
+  
+  .carouselContainer p {
+    font-size: 2rem;
+  }
+  
+  .carouselContainer span {
+    color: purple;
+  }
+  
+  .cookingCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    width: 40rem;
+    position: relative;
+    top: 0;
+  }
+  
+  .slide {
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #cookingArrow {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  
+  }
+  
+  .cookingArrowLeft {
+    border-width: 3vh 4vh 3vh 0;
+    border-color: transparent black transparent transparent;
+  }
+  
+  .cookingArrowRight {
+    border-width: 3vh 0 3vh 4vh;
+    border-color: transparent transparent transparent black;
+  }
+  
+  .cakeInfoContainer {
+    position: relative;
+    display: flex;
+    height: 60vh;
+  }
+  
+  .cakeInfoContainer img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cakeInfoImage {
+    width: 100vh;
+    height: 50vh;
+    /* height: 25rem;
+    width: 40rem; */
+  }
+  .cakeParagraphContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .cakeParagraphContainer p {
+    padding-left: 2rem;
+  }

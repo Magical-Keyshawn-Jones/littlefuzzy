@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
+import './PokemonStyles.css'
 
 export function PokemonShowCase (props) {
 

@@ -1,3 +1,4 @@
+import './GamingStyles.css'
 
 export function Gaming (props) {
    

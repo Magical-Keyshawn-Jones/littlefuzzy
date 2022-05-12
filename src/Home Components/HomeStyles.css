@@ -1,0 +1,90 @@
+/* Home Decorations!!! */
+
+.Home {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(6, 255, 234), pink, rgb(0, 183, 255));
+    /* Keep for dark background */
+    /* background-image: linear-gradient(to bottom right, black, grey); */
+  }
+  
+  .HomeSheep {
+    display: flex;
+    width: 100%;
+    height:fit-content;
+    margin-bottom: 2rem;
+  }
+  
+  /* Video Player */
+  .HomePlayer {
+    display: inline-block;
+    width: 50%;
+    margin-left: 5rem;
+    height: 31rem;
+    margin-top: 5rem;
+    /* Box-Shadow Key: color x-axis y-axis blur size */
+    box-shadow: rgb(0, 0, 0) 0 0 1rem 2px;
+  }
+  
+  /* About Me !!! */
+  .aboutMe {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1000;
+    height: 31rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 5rem;
+    /* color: white; */
+    color: black;
+    position: relative;
+    /* Box-Shadow Key: color x-axis y-axis blur size */
+    box-shadow: rgb(0, 0, 0) 0 0 1rem 2px;
+    border-radius: 1rem;
+  
+  }
+  
+  .aboutMe::before {
+    content: '';
+    display:block;
+    position: absolute;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Images/App&Home/flowers_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+  }
+  
+  .aboutMe p {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .bold {
+    font-weight: bold;
+  }  
+  
+  .aboutMeListHolder {
+    position: relative;
+    font-size: 4rem;
+  }
+  
+  .AboutMeList {
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 2.7rem;
+    margin-left: 2rem;
+  }
+  
+  .aboutHeader {
+    position: relative;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  
