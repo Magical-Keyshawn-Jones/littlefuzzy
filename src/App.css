@@ -86,7 +86,13 @@ table {
 }
 
 /* Responsive Design */
-@media (max-width: 400px), (max-height: 916) {
+/* @media (max-width: 400px), (max-height: 916) {
+  .Link {
+    font-size: 6.2vw;
+  }
+} */
+
+@media (max-width: 1080px), (max-height: 2400px) {
   .Link {
     font-size: 6.2vw;
   }
