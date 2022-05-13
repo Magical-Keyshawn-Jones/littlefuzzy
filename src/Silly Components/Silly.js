@@ -108,10 +108,9 @@ function Silly () {
                 <button>Submit</button>
             </form>
             <div className='SillyParagraph'>
-                <p>
-                    {`My ${person[bestPersonNumber || personNumber]} 
-                    has ${movementVerbs[bestMovementNumber || movementNumber]} towards polar bears`}
-                </p>
+                <div>
+                    <p>{`My ${person[bestPersonNumber || personNumber]} has ${movementVerbs[bestMovementNumber || movementNumber]} towards polar bears`}</p>
+                </div>
             </div>
        </div>
     )
