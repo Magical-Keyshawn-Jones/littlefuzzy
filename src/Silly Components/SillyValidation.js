@@ -9,8 +9,17 @@ const sillyTester = yup.object().shape({
     animal: yup
     .string()
     .trim()
-    // .min(1, 'wut you do?')
-    .required('Animal Required')
+    .required('Animal Required'),
+    maritalStatus: yup
+    .string()
+    .oneOf(['Single', 
+    'Married', 
+    'Divorced', 
+    'Separated', 
+    'Never Married'], 'Status Required'),
+    ending: yup
+    .string()
+    .oneOf(['Good Ending', 'Bad Ending'], 'Ending Required')
 })
 
 export default sillyTester;

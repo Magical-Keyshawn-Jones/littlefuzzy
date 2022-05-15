@@ -51,7 +51,7 @@ table {
 
 /* Body Decorations */
 .BodyAuty {
-  height: 100rem;
+  height: 80rem;
 }
 
 /* Link Decorations */
@@ -87,9 +87,15 @@ table {
 
 
 /* Responsive Design */
-@media (max-width: 400px), (max-height: 916) {
+/* Vertical Position */
+@media (max-width: 400px), (max-height: 916px) {
+  .BodyAuty {
+    height: 90rem;
+  }
+  
   .Navigate {
     height: fit-content;
+    width: 100%;
   }
   .Nav-Intro p {
     display: none;
@@ -99,3 +105,4 @@ table {
     font-size: 5.2vw;
   }
 }
+

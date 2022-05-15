@@ -8,9 +8,14 @@ export function Home ( props ) {
     // Making Home Video Player component
     const homeVideo = 
         <div className='HomePlayer'>
-            <ReactPlayer playing={true} loop={true} height='100%' width='100%' url='https://youtu.be/zrYpQGcZ06M'/>
+            <ReactPlayer controls={true} playing={true} loop={true} height='100%' width='100%' url='https://youtu.be/zrYpQGcZ06M'/>
         </div>
 
+// Grabbing height and width of window
+const dimensions = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
     // About Me Component
     const aboutMe = 
         <div className='aboutMe'>
@@ -20,22 +25,15 @@ export function Home ( props ) {
                  <br/>
                  Javascript, Html, CSS, and React so far
              </p> */}
-            {/* <ol className='aboutMeListHolder'>
-                <li className='AboutMeList'>My nickname is <span className='pink'>Doorknob</span></li>
-                <li className='AboutMeList'>I love the color <span className='pink'>pink</span></li>
-                <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
-                <li className='AboutMeList'>I love acting silly and making people laugh</li>
-                <li className='AboutMeList'><span className='PeoplePerson'>100% People Person!</span></li>
-            </ol> */}
-            <ol className='aboutMeListHolder'>
-                <li className='AboutMeList'>My nickname is <span className='pink'>Doorknob</span></li>
-                <li className='AboutMeList'>I love the color <span className='pink'>pink</span></li>
-                <li className='AboutMeList'>I have a passion for God, Video Games, and Coding</li>
-                <li className='AboutMeList'>I am skilled at Javascript, Html, CSS, React</li>
-                <li className='AboutMeList'><span className='bold'>100% People Person!</span></li>
+            <ol>
+                <li>My nickname is <span className='pink'>Doorknob</span></li>
+                {/* <li>I love the color <span className='pink'>pink</span></li> */}
+                {/* <li>I have a passion for God, Video Games, and Coding</li> */}
+                <li>I am skilled at Javascript, Html, CSS, React</li>
+                <li><span className='bold'>100% People Person!</span></li>
             </ol>
         </div>
-    
+
     return (
         <div className='Home'>
             <div className='HomeSheep'>

@@ -22,12 +22,19 @@ function Silly () {
     const initialSillyValues = {
         name: '',
         animal: '',
+        maritalStatus: '',
+        ending: '',
+        friendlyAnimal: false,
+        
     }
 
     // initial Error Form Values
     const errorSillyValues = {
         name: '',
         animal: '',
+        maritalStatus: '',
+        ending: '',
+
     }
 
     // Making States for initial Silly and Error Values
@@ -68,18 +75,23 @@ function Silly () {
         return [value, setValue, handleChanges]
     }
 
-    function onSubmitHandler (event) {
+    function submitButton (event) {
         event.preventDefault()
-
-        setBestPersonNumber(Math.floor(Math.random() * person.length))
-        setBestMovementNumber(Math.floor(Math.random() * movementVerbs.length))
 
         setSilly(initialSillyValues)
     }
 
+    function refreshButton (event) {
+        event.preventDefault()
+
+        setBestPersonNumber(Math.floor(Math.random() * person.length))
+        setBestMovementNumber(Math.floor(Math.random() * movementVerbs.length))
+    }
+
     return (
        <div className='SillyFormHolder'>
-            <form className='SillyForm' onSubmit={(event)=>{onSubmitHandler(event)}}>
+            <form className='SillyForm'>
+                <h3>Create Your Story</h3>
                 <label>
                     Name
                     <input 
@@ -105,7 +117,65 @@ function Silly () {
                     />
                     {errorValues.animal}
                 </label>
-                <button>Submit</button>
+
+                <label>
+                    Marital Status
+                    <select
+                    name='maritalStatus'
+                    value={silly.maritalStatus}
+                    onChange={handleSilly}
+                    >
+                        <option>Select</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                        <option>Separated</option>
+                        <option>Never Married</option>
+                    </select>
+                    {errorValues.maritalStatus}
+                </label>
+                
+                <label>
+                    Friendly Animal
+                    <input
+                    type='checkbox'
+                    name='friendlyAnimal'
+                    checked={silly.friendlyAnimal}
+                    onChange={handleSilly}
+                    />
+                </label>
+
+                <label className='endingRadio'>
+                    Ending
+                    <div>
+                    <label>
+                        Good Ending
+                        <input
+                        type='radio'
+                        name='ending'
+                        value='Good Ending'
+                        onChange={handleSilly}
+                        checked={silly.ending === 'Good Ending'}
+                    />
+                    </label>
+
+                    <label>
+                        Bad Ending
+                        <input
+                        type='radio'
+                        name='ending'
+                        value='Bad Ending'
+                        onChange={handleSilly}
+                        checked={silly.ending === 'Bad Ending'}
+                        />
+                    </label>
+                    </div>
+                </label>
+
+                <div className='formButtonContainer'>
+                <button onClick={(event)=>{submitButton(event)}}>Submit</button>
+                <button onClick={(event)=>{refreshButton(event)}}>Refresh</button>
+                </div>
             </form>
             <div className='SillyParagraph'>
                 <div>

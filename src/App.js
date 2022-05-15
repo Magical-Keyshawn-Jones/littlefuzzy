@@ -23,9 +23,10 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
 
   const dispatch = useDispatch()
 
- useEffect(()=>{
-  dispatch(fetchPokemon())
- },[])
+  // Setting Redux with pokemon api
+    useEffect(()=>{
+      dispatch(fetchPokemon())
+    },[]) 
 
   // Storing Welcome words in a Variable
   const navWords = {

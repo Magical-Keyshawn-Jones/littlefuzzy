@@ -18,8 +18,17 @@
   }
   
   .GamingTitle {
+    padding-top: 1rem;
     position: relative;
     display: flex;
     justify-content: center;
     font-size: 5rem;
+  }
+
+  /* Responsive Design */
+
+  @media (max-width: 400px) , (max-width: 916px) {
+    .GamingTitle {
+      font-size: 1.8rem;
+    }
   }

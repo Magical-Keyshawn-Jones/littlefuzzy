@@ -38,17 +38,14 @@
     margin-left: 2rem;
     margin-right: 2rem;
     font-size: 5rem;
-    /* color: white; */
-    color: black;
-    position: relative;
     /* Box-Shadow Key: color x-axis y-axis blur size */
     box-shadow: rgb(0, 0, 0) 0 0 1rem 2px;
     border-radius: 1rem;
-  
   }
   
   .aboutMe::before {
     content: '';
+    z-index: 0;
     display:block;
     position: absolute;
     opacity: .4;
@@ -64,23 +61,25 @@
     position: relative;
     text-align: center;
     font-size: 3rem;
+    overflow-wrap: break-word;
+  }
+
+  .aboutMe li {
+    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    margin-left: .6rem;
+  }
+  
+  .aboutMe ol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .bold {
     font-weight: bold;
   }  
-  
-  .aboutMeListHolder {
-    position: relative;
-    font-size: 4rem;
-  }
-  
-  .AboutMeList {
-    margin-bottom: 1rem;
-    position: relative;
-    font-size: 2.7rem;
-    margin-left: 2rem;
-  }
   
   .aboutHeader {
     position: relative;
@@ -89,8 +88,7 @@
   }
 
   /* Responsive Designs */
-  /* @media (max-width: 1000px), (max-height: 500px), (max-width: 500px) */
-
+  /* Phone Vertical Position */
   @media (max-width: 400px), (max-height: 916px) {
     .HomeSheep {
       display: flex;
@@ -112,19 +110,19 @@
       margin-left: 1.7rem;
     }
 
-    .aboutHeader {
-      font-size: 2rem;
-      margin: .2rem;
-    }
-
-    .aboutMeListHolder {
+    .aboutMe ol {
       width: 100%;
       height: 100%;
     }
 
-    .aboutMeListHolder li{
+    .aboutMe li {
       font-size: 5.7vw;
       margin-bottom: .6rem;
+    }
+
+    .aboutHeader {
+      font-size: 2rem;
+      margin: .2rem;
     }
   }
   
