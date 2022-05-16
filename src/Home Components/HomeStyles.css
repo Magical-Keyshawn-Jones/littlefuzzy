@@ -7,6 +7,26 @@
     /* Keep for dark background */
     /* background-image: linear-gradient(to bottom right, black, grey); */
   }
+
+  .HomeLineTop {
+    position: relative;
+    left: 4%;
+    top: 5%;
+    width: 94.5%;
+    /* border-bottom: 3px solid black */
+    height: 5px;
+    background-image: linear-gradient(to right, rgb(6, 255, 234) 1px, purple, blue, pink)
+  }
+
+  .HomeLineBottom {
+    position: relative;
+    left: 4%;
+    top: -1%;
+    width: 94.5%;
+    /* border-bottom: 3px solid black */
+    height: 5px;
+    background-image: linear-gradient(to right, rgb(6, 255, 234) 1px, purple, blue, pink)
+  }
   
   .HomeSheep {
     display: flex;

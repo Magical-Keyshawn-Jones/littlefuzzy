@@ -36,10 +36,12 @@ const dimensions = {
 
     return (
         <div className='Home'>
+            <p className='HomeLineTop'></p>
             <div className='HomeSheep'>
                 {homeVideo}
                 {aboutMe}
             </div>
+            <p className='HomeLineBottom'></p>
             <Silly/>
         </div>
     )
