@@ -103,4 +103,8 @@
     .SillyParagraph p {
       font-size: 10vw;
     }
+
+    .endingRadio {
+      width: 15rem !important;
+    }
   }
