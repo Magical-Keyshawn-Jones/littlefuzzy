@@ -1,11 +1,16 @@
 /* Pokemon Decorations */
 
 /* PokemonShowcase Decorations */
+.pokemonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .pokemonHeading {
     font-size: 4rem;
     text-align: center;
   }
-  
+
   .pokemonShowcaseImage {
     display: flex;
     flex-wrap: wrap;
@@ -36,5 +41,15 @@
   
   .pokemonProfileImage img{
     height: 100%;
-    width: auto;
+    width: 100%;
+  }
+
+  /* Responsive Designs */
+  @media (max-width: 400px), (max-height: 916px) {
+    .pokemonProfileImage {
+      position: relative;
+      left: 12%;
+      height: 20rem;
+      width: 15rem;
+    }
   }

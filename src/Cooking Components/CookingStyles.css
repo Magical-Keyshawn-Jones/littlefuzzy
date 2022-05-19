@@ -1,4 +1,5 @@
 /* Cooking Images */
+/* Get Rid of Vh sizes */
 .cookingTopLevelContainer {
     display: flex;
     position: relative;
@@ -9,7 +10,7 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    min-width: fit-content;
+    /* min-width: fit-content; */
   }
   
   .profileContainer p {
@@ -122,12 +123,9 @@
   .cakeInfoImage {
     width: 100vh;
     height: 50vh;
-    /* height: 25rem;
-    width: 40rem; */
   }
   .cakeParagraphContainer {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     font-size: 2rem;
   }
@@ -141,19 +139,38 @@
     .cookingTopLevelContainer {
       display: flex;
       flex-direction: column;
-      margin-bottom: 25rem;
+      margin: 1rem 1rem 10rem 1rem;
+    }
+
+    .profileContainer {
+      width: 20rem;
+      height: 14rem;
+    }
+
+    .profileContainer p {
+      font-size: 2rem;
     }
 
     .cookingProfileImage {
-      width: 20rem;
+      position: relative;
+      left: 25%;
+      width: 50%;
+      height: 10rem;
     }
     
     .cookingCarousel {
       width: 20rem;
+      height: 10rem;
     }
 
+    .carouselContainer h1 {
+      font-weight: 800;
+      font-size: 2rem !important;
+    }
+    
     .carouselContainer h1, .carouselContainer p {
-      font-size: 1rem;
+      margin-top: 1rem;
+      font-size: 1.3rem;
     }
 
     .cakeInfoContainer {
@@ -162,6 +179,7 @@
       justify-content: center;
       height: fit-content;
       margin-bottom: 2rem;
+      margin-right: 1rem;
     }
 
     #flip {
@@ -175,10 +193,10 @@
     }
 
     .cakeInfoImage {
-      height: 4rem;
-      width: 4rem;
-      display: flex;
-      justify-items: center;
+      height: 9rem;
+      width: 11rem;
+      position: relative;
+      left: 27%;
     }
     
   }

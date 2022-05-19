@@ -63,7 +63,7 @@ export function Cooking (props) {
                     <div className='cookingProfileImage'>
                         <img src={starButterFly} alt='Star Butterfly'/>
                     </div>
-                    <br/>
+                    {/* <br/> */}
                     <p>Queen of Bakery</p>
                 </div>
 
