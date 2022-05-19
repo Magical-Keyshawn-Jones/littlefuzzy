@@ -15,7 +15,7 @@ videoGames.get('/', (req, res) => {
 })
 
 // Retrieves Game with that id
-videoGames.get('/:id', gameMiddleware.GameIdChecker, (req, res) => {
+videoGames.get('/:id', gameMiddleware.gameIdChecker, (req, res) => {
     const { id } = req.params
 
     gameModel.getById(id)
@@ -28,7 +28,8 @@ videoGames.get('/:id', gameMiddleware.GameIdChecker, (req, res) => {
     })
 })
 
-videoGames.post('/', (req, res) => {
+// Post new Game
+videoGames.post('/', gameMiddleware.gameBodyChecker, (req, res) => {
     const { body } = req
 
     gameModel.create(body)
@@ -41,7 +42,8 @@ videoGames.post('/', (req, res) => {
     })
 })
 
-videoGames.put('/:id', (req, res) => {
+// Change Game with that id
+videoGames.put('/:id', gameMiddleware.gameIdChecker, gameMiddleware.gameBodyChecker, (req, res) => {
     const { id } = req.params
     const { body } = req
 
@@ -52,6 +54,20 @@ videoGames.put('/:id', (req, res) => {
     .catch(err => {
         console.log(err)
         res.status(500).json({ message: 'Could update Game with that id' })
+    })
+})
+
+// Deletes Game with that Id 
+videoGames.delete('/:id', gameMiddleware.gameIdChecker, (req, res) => {
+    const { id } = req.params
+
+    gameModel.remove(id)
+    .then(results => {
+        res.status(200).json(results)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json({ message: 'Could not delete game with that id'})
     })
 })
 

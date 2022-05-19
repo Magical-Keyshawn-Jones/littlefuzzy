@@ -20,14 +20,23 @@ async function create(game) {
 }
 
 function update(id, changes) {
-    // Update VideoGames set Game = 'Fabulous' Where id = 18
+    // Update VideoGames set Game = 'Fabulous' Where id = id(39)
     return db('VideoGames').where('id', id).update(changes)
     .then((count) => (count > 0 ? getById(id) : null))
+}
+
+function remove(id) {
+    // Delete from VideoGames Where id = id(5)
+    return db('videoGames').where('id',id).del()
+    .then(results => {
+        return { message: `Successfully Delete Post with id: ${id}`}
+    })
 }
 
 module.exports = {
     getAll,
     getById,
     create,
-    update, 
+    update,
+    remove, 
 }
