@@ -33,7 +33,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExpo
     home: 'Welcome to my Home!',
     gaming: 'Super Awesome Gaming Area!',
     cooking: 'Cooking Shout out!',
-    pokemon: 'I Hate Pokemon, Testing Redux'
+    pokemon: 'I Love Pokemon, Testing Redux'
   }
 
   const [navWording, setNavWording] = useState(navWords.home)

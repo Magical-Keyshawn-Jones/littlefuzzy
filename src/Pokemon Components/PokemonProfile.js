@@ -10,7 +10,7 @@ function PokemonProfile (props) {
         <div onClick={()=>{}}>
             {loading === true ? <h1>Grabbing Best Pokemon...</h1> : (
                 <div>
-                    <h1 className='pokemonHeading'>Welcome To Hate That {pokemon[pokemonId].name}!!!</h1>
+                    <h1 className='pokemonHeading'>Welcome To love That {pokemon[pokemonId].name}!!!</h1>
 
                     <div className="pokemonProfileImage">
                         <img  src={pokemonImages[pokemonId]} alt=''/>
