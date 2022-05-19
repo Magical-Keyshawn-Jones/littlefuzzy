@@ -1,4 +1,5 @@
 /* Home Decorations!!! */
+/* Never use vh to size containers */
 
 .Home {
     width: 100%;
@@ -120,13 +121,13 @@
     .HomePlayer {
       margin-top: 3rem;
       margin-left: 1.6rem;
-      height: 30vh;
-      width: 40vh;
+      height: 14rem;
+      width: 19rem;
     }
 
     .aboutMe {
-      height: 30vh;
-      width: 40vh;
+      height: 14rem;
+      width: 19rem;
       margin-left: 1.7rem;
     }
 

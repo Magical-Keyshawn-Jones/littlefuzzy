@@ -56,12 +56,6 @@ export function Cooking (props) {
         }
     }
 
-    // useEffect(()=>{
-    //     autoSlider()
-    // },[current])
-
-    // autoSlider()
-    
     return (
         <main className='cookingHomePage'>
             <header className='cookingTopLevelContainer'>
@@ -92,20 +86,20 @@ export function Cooking (props) {
                 </div>
             </header>
 
-            <section id={`${christianCake}`} className='cakeInfoContainer'>
+            <section id='flip' className='cakeInfoContainer'>
                 <div className='cakeParagraphContainer'>
                     <p>
                         Looking for a cake that's godly and delicious? A cake you use to segway into Godly conversations? Then search no more! With every bite scripture is being fed right into the belly and soul.
                         This is my go to cake for church events
                     </p>
                 </div>
-                <div className='cakeInfoImage'>
+                <div id={`${christianCake}`} className='cakeInfoImage'>
                     <img src={christianCake} alt='Christian Cake' />
                 </div>
             </section>
 
             <section id={`${turquoiseCake}`} className='cakeInfoContainer'>
-                <div className='cakeInfoImage'>
+                <div  className='cakeInfoImage'>
                     <img src={turquoiseCake} alt='Turquoise Cake' />
                 </div>
                 <div className='cakeParagraphContainer'>
@@ -116,14 +110,14 @@ export function Cooking (props) {
                 </div>
             </section>
 
-            <section id={`${princessCake}`} className='cakeInfoContainer'>
+            <section id='flip' className='cakeInfoContainer'>
                 <div className='cakeParagraphContainer'>
                     <p>
                         A cake meant only for Queens and Princesses. A beautiful white and pink bed with cute little tiny teddy bear! Take a bite of this cake and you will 
                         find only rainbows and unicorns
                     </p>
                 </div>
-                <div className='cakeInfoImage'>
+                <div id={`${princessCake}`} className='cakeInfoImage'>
                     <img src={princessCake} alt='Princess Cake' />
                 </div>
             </section>
@@ -140,14 +134,14 @@ export function Cooking (props) {
                 </div>
             </section>
 
-            <section id={`${weddingCake}`} className='cakeInfoContainer'>
+            <section id='flip' className='cakeInfoContainer'>
                 <div className='cakeParagraphContainer'>
                     <p>
                         Getting Married, wanting to marry to someone, or just want to taste a wedding cake in general? I can make a super tall fancy looking cake for any couple 
                         and in the most elegant way
                     </p>
                 </div>
-                <div className='cakeInfoImage'>
+                <div id={`${weddingCake}`} className='cakeInfoImage'>
                     <img src={weddingCake} alt='Wedding Cake' />
                 </div>
             </section>

@@ -135,3 +135,50 @@
   .cakeParagraphContainer p {
     padding-left: 2rem;
   }
+
+  /* Responsive Design */
+  @media (max-width: 400px), (max-height: 916px) {
+    .cookingTopLevelContainer {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25rem;
+    }
+
+    .cookingProfileImage {
+      width: 20rem;
+    }
+    
+    .cookingCarousel {
+      width: 20rem;
+    }
+
+    .carouselContainer h1, .carouselContainer p {
+      font-size: 1rem;
+    }
+
+    .cakeInfoContainer {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+
+    #flip {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
+    .cakeInfoContainer p {
+      margin-top: .3rem;
+      font-size: 1rem;
+    }
+
+    .cakeInfoImage {
+      height: 4rem;
+      width: 4rem;
+      display: flex;
+      justify-items: center;
+    }
+    
+  }
