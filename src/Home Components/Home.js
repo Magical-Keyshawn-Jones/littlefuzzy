@@ -29,7 +29,8 @@ const dimensions = {
                 <li>My nickname is <span className='pink'>Doorknob</span></li>
                 {/* <li>I love the color <span className='pink'>pink</span></li> */}
                 {/* <li>I have a passion for God, Video Games, and Coding</li> */}
-                <li>I am skilled at Javascript, Html, CSS, React</li>
+                <li>I am skilled at Javascript, Html, CSS, React,</li>
+                <li>Redux, SQL</li>
                 <li><span className='bold'>100% People Person!</span></li>
             </ol>
         </div>

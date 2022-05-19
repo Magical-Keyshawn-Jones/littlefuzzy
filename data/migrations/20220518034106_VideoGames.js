@@ -1,4 +1,4 @@
-
+// Create a Completely new table
 exports.up = function(knex) {
   return knex.schema.createTable('Video Games', table => {
       table.increments()

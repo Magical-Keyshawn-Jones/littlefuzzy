@@ -10,6 +10,7 @@ import { useState } from 'react'
 // Add Radio for 'Dead' or 'Alive'
 // Customize to validation form 
 // use cypress
+// Use SQL to store statistics/Data on 'Create Your Story': So on submit it will go to SQL
 
 function Silly () {
 
