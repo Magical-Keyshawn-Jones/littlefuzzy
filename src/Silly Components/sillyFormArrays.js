@@ -22,6 +22,15 @@ const person = [
  'Half-sister', 'Grandparents', 'Children', 'Brother-in-Law', 'Stepfather'   
 ]
 
+const goodAnimal = [
+  'They had a tea party', 'They went to the park', 'They had a pool party',
+  'They had a dance party'
+]
+
+const badAnimal = [
+  `They all laughed`
+]
+
 // Random Number function
 // SideNote it is possible to get a random in between number
 function sillyRandomNumber (number) {

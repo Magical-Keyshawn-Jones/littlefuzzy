@@ -109,12 +109,10 @@
   }
 
   /* Responsive Designs */
-  /* Phone Vertical Position */
-  @media (max-width: 400px), (max-height: 916px) {
+  @media (max-width: 400px) {
     .HomeSheep {
       display: flex;
       flex-direction: column;
-      /* margin-bottom: 3rem;      */
       margin-bottom: 7rem;     
     }
 

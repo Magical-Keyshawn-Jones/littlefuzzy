@@ -45,7 +45,7 @@
   }
 
   /* Responsive Designs */
-  @media (max-width: 400px), (max-height: 916px) {
+  @media (max-width: 400px) {
     .pokemonProfileImage {
       position: relative;
       left: 12%;

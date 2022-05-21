@@ -6,6 +6,9 @@ const sillyTester = yup.object().shape({
     .trim()
     // .min(5,'Need more than that kid')
     .required('Name is required'),
+    gender: yup
+    .string()
+    .oneOf(['Male', 'Female']),
     animal: yup
     .string()
     .trim()
@@ -17,6 +20,8 @@ const sillyTester = yup.object().shape({
     'Divorced', 
     'Separated', 
     'Never Married'], 'Status Required'),
+    goodAnimals: yup.boolean(),
+    badAnimals: yup.boolean(),
     ending: yup
     .string()
     .oneOf(['Good Ending', 'Bad Ending'], 'Ending Required')

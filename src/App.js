@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Link}from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
 import { fetchPokemon } from './Redux Related/Reducers';
-import {Pokemon, Cooking, Gaming, Games, Home} from './Export Files/AppRouteExports'
+import {Pokemon, Cooking, Gaming, Games, Home} from './AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
 // Add moving png jpeg images on my webpage

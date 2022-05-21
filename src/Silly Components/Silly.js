@@ -22,16 +22,19 @@ function Silly () {
     // initial Form Values
     const initialSillyValues = {
         name: '',
+        gender: '',
         animal: '',
         maritalStatus: '',
         ending: '',
-        friendlyAnimal: false,
+        goodAnimals: false,
+        badAnimals: false,
         
     }
 
     // initial Error Form Values
     const errorSillyValues = {
         name: '',
+        gender: '',
         animal: '',
         maritalStatus: '',
         ending: '',
@@ -106,6 +109,32 @@ function Silly () {
                     {errorValues.name}
                 </label>
 
+                <label className='genderRadio'>
+                    <span>Gender</span> 
+                    <div>
+                    <label>
+                        Male
+                        <input
+                        type='radio'
+                        name='gender'
+                        value='Male'
+                        onChange={handleSilly}
+                        checked={silly.gender === 'Male'}
+                        />
+                    </label>
+                    <label>
+                        Female
+                        <input
+                        type='radio'
+                        name='gender'
+                        value='Female'
+                        onChange={handleSilly}
+                        checked={silly.gender === 'Female'}
+                        />
+                    </label>
+                    </div>
+                </label>
+
                 <label>
                     Animal
                     <input 
@@ -136,40 +165,52 @@ function Silly () {
                     {errorValues.maritalStatus}
                 </label>
                 
-                <label>
-                    Friendly Animal
-                    <input
-                    type='checkbox'
-                    name='friendlyAnimal'
-                    checked={silly.friendlyAnimal}
-                    onChange={handleSilly}
-                    />
-                </label>
+                <div className='animalsContainer'>
+                    <label>
+                        Good Animals
+                        <input
+                        type='checkbox'
+                        name='goodAnimals'
+                        checked={silly.goodAnimals}
+                        onChange={handleSilly}
+                        />
+                    </label>
+
+                    <label>
+                        Bad Animal
+                        <input
+                        type='checkbox'
+                        name='badAnimals'
+                        checked={silly.badAnimals}
+                        onChange={handleSilly}
+                        />
+                    </label>
+                </div>
 
                 <label className='endingRadio'>
                     Ending
                     <div>
-                    <label>
-                        Good Ending
-                        <input
-                        type='radio'
-                        name='ending'
-                        value='Good Ending'
-                        onChange={handleSilly}
-                        checked={silly.ending === 'Good Ending'}
-                    />
-                    </label>
+                        <label>
+                            Good Ending
+                            <input
+                            type='radio'
+                            name='ending'
+                            value='Good Ending'
+                            onChange={handleSilly}
+                            checked={silly.ending === 'Good Ending'}
+                            />
+                        </label>
 
-                    <label>
-                        Bad Ending
-                        <input
-                        type='radio'
-                        name='ending'
-                        value='Bad Ending'
-                        onChange={handleSilly}
-                        checked={silly.ending === 'Bad Ending'}
-                        />
-                    </label>
+                        <label>
+                            Bad Ending
+                            <input
+                            type='radio'
+                            name='ending'
+                            value='Bad Ending'
+                            onChange={handleSilly}
+                            checked={silly.ending === 'Bad Ending'}
+                            />
+                        </label>
                     </div>
                 </label>
 
@@ -180,7 +221,9 @@ function Silly () {
             </form>
             <div className='SillyParagraph'>
                 <div>
-                    <p>{`My ${person[bestPersonNumber || personNumber]} has ${movementVerbs[bestMovementNumber || movementNumber]} towards polar bears`}</p>
+                    <p>{`My ${person[bestPersonNumber || personNumber]} has ${movementVerbs[bestMovementNumber || movementNumber]}
+                     toward a group of polar bears. They had a tea party, which tragically ended with the Polar bears eating the ${person[bestPersonNumber || personNumber]}`}
+                     </p>
                 </div>
             </div>
        </div>

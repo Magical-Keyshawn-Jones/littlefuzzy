@@ -2,6 +2,8 @@
 
 .GamingHome {
     position: relative;
+    display: flex;
+    justify-content: space-between;
   }
   
   .GamingHome::before {
@@ -25,9 +27,25 @@
     font-size: 5rem;
   }
 
+  .gamingContainer {
+    position: relative
+  }
+
+  .gamingContainer img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gamingReviews {
+    position: relative;
+    font-size: 3rem;
+    border-left: 2rem solid greenyellow;
+    height: 102%;
+  }
+
   /* Responsive Design */
 
-  @media (max-width: 400px) , (max-width: 916px) {
+  @media (max-width: 400px) {
     .GamingTitle {
       font-size: 1.3rem;
     }

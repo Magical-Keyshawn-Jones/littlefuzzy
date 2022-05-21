@@ -135,7 +135,7 @@
   }
 
   /* Responsive Design */
-  @media (max-width: 400px), (max-height: 916px) {
+  @media (max-width: 400px) {
     .cookingTopLevelContainer {
       display: flex;
       flex-direction: column;
