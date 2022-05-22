@@ -9,13 +9,13 @@ React
 Redux
 SQL
 
-Responsive Design
-Single-Page Applications
-React Hooks
-Asynchronous Javascript
-LESS
-Intergration Testing
-End-to-End Testing
-Automated Unit Testing
-Node js
+Responsive Design,
+Single-Page Applications,
+React Hooks,
+Asynchronous Javascript,
+LESS,
+Intergration Testing,
+End-to-End Testing,
+Automated Unit Testing,
+Node js,
 Express js
