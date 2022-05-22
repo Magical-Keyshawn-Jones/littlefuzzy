@@ -65,7 +65,7 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './AppRouteExports'
           <Route path='/pokemon/*' element={<Pokemon pokemon={pokemon} loading={loading} />}/>
           <Route path='/cooking' element={<Cooking />}/>
           <Route path='/gaming/:viral' element={<Games/>}/>
-          <Route path='/gaming' element={<Gaming/>}/>
+          <Route path='/gaming/*' element={<Gaming/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
     </div>

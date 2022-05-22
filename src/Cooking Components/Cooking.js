@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './CookingStyles.css'
 import {
-    caroselImages,
+    caroselImages as carouselImages,
     starButterFly,
     princessCake,
     christianCake,
@@ -27,7 +27,7 @@ export function Cooking (props) {
     function leftClickHandler(){
         switch(current){
             case 0:
-                setCurrent(caroselImages.length - 1)
+                setCurrent(carouselImages.length - 1)
             break;
             default:
                 setCurrent(current - 1)
@@ -37,7 +37,7 @@ export function Cooking (props) {
     // Right Arrow Click
     function rightClickHandler(){
         switch(current){
-            case caroselImages.length - 1:
+            case carouselImages.length - 1:
                 setCurrent(0)
             break;
             default:
@@ -45,16 +45,17 @@ export function Cooking (props) {
         }
     }
 
-    function autoSlider(){
-        switch(current){
-            case caroselImages.length - 1:
-                setTimeout((setCurrent(0)),2000)
-            break;
-            default:
-                setTimeout((setCurrent(current + 1)),2000)
-                
-        }
-    }
+    useEffect(()=>{
+        setTimeout(() => {
+            switch(current){
+                case carouselImages.length - 1:
+                    setCurrent(0)
+                break;
+                default:
+                    setCurrent(current + 1)
+            }
+        }, 4000);
+    },[current])
 
     return (
         <main className='cookingHomePage'>
@@ -71,8 +72,8 @@ export function Cooking (props) {
                     <div className='cookingCarousel'>
                         <div id='cookingArrow' className='cookingArrowLeft' onClick={()=>{leftClickHandler()}}></div>
                         <div className='slide'>
-                            <a href={`#${caroselImages[current]}`}>
-                            <img src={caroselImages[current]} alt='Slideshow images'/>
+                            <a href={`#${carouselImages[current]}`}>
+                            <img src={carouselImages[current]} alt='Slideshow images'/>
                             </a>
                         </div>
                         <div id='cookingArrow' className='cookingArrowRight' onClick={()=>{rightClickHandler()}}></div>

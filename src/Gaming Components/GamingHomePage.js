@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import gamingImages from "./exportGamingImages";
 
-export default function GamingLogin() {
+export default function GamingHomePage() {
   const [current, setCurrent] = useState(6);
 
   useEffect(() => {
@@ -24,9 +24,19 @@ export default function GamingLogin() {
 
       <div className="gamingContainer">
         <div className="slideShowContainer">
+          <div id='arrow' className='arrowLeft'></div>
+          {/* <div className='backgroundArrow'></div> */}
           <div className="slide">
             <img src={gamingImages[current]} alt="Gaming Slide Show" />
           </div>
+          {/* <div className='backgroundArrow'></div> */}
+          <div id='arrow' className='arrowRight'></div>
+        </div>
+        <div>
+          <p>
+            Insert form here. Inputs: game(required), rating(required), platform(required),
+            and comments(required)
+          </p> 
         </div>
       </div>
 

@@ -27,13 +27,66 @@
     font-size: 5rem;
   }
 
+  .gamingContainer, .gamingReviews {
+    padding-top: 2rem;
+  }
+
   .gamingContainer {
-    position: relative
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 102%;
+    font-size: 2rem;
   }
 
   .gamingContainer img {
     width: 100%;
     height: 100%;
+  }
+
+  .slideShowContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 25%;
+    height: 30rem;
+    width: 20rem;
+  }
+
+  .slideShowContainer::before {
+    content: '';
+    position: fixed;
+    height: 38.%;
+    width: 19.4%;
+    background-color: white;
+    z-index: 0;
+  }
+
+  .slide {
+    position: relative;
+  }
+
+  /* .backgroundArrow {
+    position:
+  } */
+
+  #arrow {
+    cursor:pointer;
+    /* position: relative; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    background-color: blue;
+  }
+
+  .arrowLeft {
+    border-width: 3vh 4vh 3vh 0;
+    border-color: transparent black transparent transparent;
+  }
+
+  .arrowRight {
+    border-width: 3vh 0 3vh 4vh;
+    border-color: transparent transparent transparent black;
   }
 
   .gamingReviews {

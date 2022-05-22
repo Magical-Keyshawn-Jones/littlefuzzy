@@ -7,7 +7,7 @@ describe('Testing Test', () => {
     })
 
     it('Does not do much!', () => {
-      expect(true).to.equal(true)
+      expect(true).equal(true)
     })
 
     // For Now helps stops loop
