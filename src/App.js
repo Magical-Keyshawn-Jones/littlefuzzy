@@ -15,12 +15,14 @@ import {Pokemon, Cooking, Gaming, Games, Home} from './AppRouteExports'
 // Try Using Position and Display css more often 
 // End Goal, fill up the entire page (It's like art class the more empty it is the more there is to improve on it)
 
- function App (props) {
+
+function App (props) {
   const { 
     pokemon,
     loading,
    } = props
 
+  console.log('Testing My amazing Debug')
   const dispatch = useDispatch()
 
   // Setting Redux with pokemon api

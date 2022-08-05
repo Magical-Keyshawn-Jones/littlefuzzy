@@ -10,5 +10,5 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { storage } from './index.js'
 
 test('App Renders without errors', () => {
-    render(<Home something={'I wuv you'} />)
+    render(<Home/>)
 })
