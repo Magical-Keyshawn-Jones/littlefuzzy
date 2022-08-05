@@ -1,0 +1,67 @@
+describe('group of tests', () => {
+    test('first test!', () => {
+        let maybeASeven = 7;
+        expect(maybeASeven).toBe(7)
+    });
+
+    it('is a test', () => {
+        let unknown = 5;
+        expect(unknown).toBeGreaterThan(4)
+    })
+
+    test('compare object', () => {
+        let someObject = {a: 5};
+        expect(someObject).not.toBe({a: 5})
+        expect(someObject).toBe(someObject)
+        expect(someObject).toEqual({a: 5})
+    });
+});
+
+describe('the Car class', () => {
+    const Car = require('./car');
+    let car;
+
+    beforeEach(() => {
+        car = new Car('Tesla', 'Model X');
+    })
+    
+    test('first car test', () => {
+        expect(Car).toBeDefined();
+        car.model = 'qwerty'
+    })
+
+    test('basic functionality', () => {
+        expect(car).toBeInstanceOf(Car);
+        expect(car.constructor).toBe(Car);
+        expect(car).toHaveProperty('make', 'Tesla');
+        expect(car).toHaveProperty('model', 'Model X');
+        expect(car).toMatchObject({ make: 'Tesla', model: 'Model X' })
+    })
+
+    test('odometer', () => {
+        expect(car).toHaveProperty('odometer')
+        expect(car.odometer).toBe(0);
+        expect(car.drive).toBeInstanceOf(Function)
+        car.drive(20);
+        expect(car.odometer).toBe(20);
+        car.drive(20);
+        expect(car.odometer).toBe(40);
+    })
+
+    test('driveAsync', () => {
+        return car.driveAsync(10)
+            .then(result => {
+                expect(result).toBe('done')
+                expect(car.odometer).toBe(10);
+            });
+    })
+
+    test('driveAsync with await', async () => {
+        await car.driveAsync(10);
+        expect(car.odometer).toBe(10);
+
+        await car.driveAsync(60);
+        expect(car.odometer).toBe(70);
+    },
+    7100)
+});

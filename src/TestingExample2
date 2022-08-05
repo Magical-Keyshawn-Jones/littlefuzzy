@@ -1,0 +1,134 @@
+const db = require('../data/dbConfig');
+const Hobbits = require('./hobbits/hobbits-model');
+const server = require('./server');
+const request = require('supertest');
+
+test('check environment', () => {
+    expect(process.env.NODE_ENV).toBe('testing');
+});
+
+// at the beginning of all tests, set up the schema of the db
+beforeAll(async () => {
+    await db.migrate.rollback();
+    await db.migrate.latest();
+});
+
+// before each test, truncate everything
+beforeEach(async () => {
+    await db('hobbits').truncate();
+    await db.seed.run();
+});
+
+afterAll(async () => {
+    await db.destroy();
+});
+
+describe('db tests', () => {
+    test('getAll', async () => {
+        const result = await Hobbits.getAll();
+        expect(result).toHaveLength(4);
+        expect(result).toMatchObject([
+            { name: 'sam' },
+            { name: 'frodo' },
+            { name: 'pippin' },
+            { name: 'merry' },
+        ]);
+    });
+    test('getById', async () => {
+        let result;
+        result = await Hobbits.getById(3);
+        expect(result).toBeDefined();
+        expect(result).toHaveProperty('name', 'pippin');
+        result = await Hobbits.getById(999);
+        expect(result).not.toBeDefined();
+    });
+    test('insert', async () => {
+        let result;
+        result = await Hobbits.insert({ name: 'bilbo' });
+        expect(result).toMatchObject({ id: 5, name: 'bilbo' });
+        result = await Hobbits.getAll();
+        expect(result).toHaveLength(5);
+        expect(result[4]).toHaveProperty('name', 'bilbo');
+    });
+    test('update', async () => {
+        let result;
+        result = await Hobbits.update(1, { name: 'samwise' });
+        expect(result).toMatchObject({ id: 1, name: 'samwise' });
+        result = await Hobbits.getById(1);
+        expect(result).toHaveProperty('name', 'samwise');
+        result = await Hobbits.getAll();
+        expect(result).toHaveLength(4);
+        result = await Hobbits.update(999, { name: 'sauron' });
+        expect(result).not.toBeDefined();
+    });
+    test('remove', async () => {
+        let result;
+        result = await Hobbits.remove(3);
+        expect(result).toMatchObject({ id: 3, name: 'pippin' });
+        result = await Hobbits.getAll();
+        expect(result).toHaveLength(3);
+        result = await Hobbits.getById(3);
+        expect(result).not.toBeDefined();
+        result = await Hobbits.remove(999);
+        expect(result).not.toBeDefined();
+    });
+});
+
+describe('HTTP tests', () => {
+    test('server is up', async () => {
+        let response = await request(server).get('/');
+        expect(response.status).toBe(200);
+        expect(response.body).toEqual({ api: 'up' });
+    });
+    test('GET /hobbits', async () => {
+        let response = await request(server).get('/hobbits');
+        expect(response.status).toBe(200);
+        expect(response.body).toMatchObject([
+            { name: 'sam' },
+            { name: 'frodo' },
+            { name: 'pippin' },
+            { name: 'merry' },
+        ]);
+    });
+    test('GET /hobbits/:id",', async () => {
+        let response;
+        response = await request(server).get('/hobbits/2');
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty('name', 'frodo');
+        response = await request(server).get('/hobbits/999');
+        expect(response.status).toBe(404);
+    });
+    test('POST /hobbits', async () => {
+        let response;
+        response = await request(server).post('/hobbits').send({ name: 'bilbo' });
+        expect(response.status).toBe(201);
+        expect(response.body).toHaveProperty('name', 'bilbo');
+        response = await request(server).post('/hobbits').send({});
+        expect(response.status).toBe(400);
+    });
+    test('DELETE /hobbits/:id', async () => {
+        let response;
+        response = await request(server).delete('/hobbits/2');
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty('name', 'frodo');
+        response = await request(server).get('/hobbits/2');
+        expect(response.status).toBe(404);
+        response = await request(server).delete('/hobbits/999');
+        expect(response.status).toBe(404);
+    });
+    test('PUT /hobbits/:id', async () => {
+        let response;
+        response = await request(server).put('/hobbits/1').send({ name: 'samwise' });
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty('name', 'samwise');
+
+        response = await request(server).get('/hobbits/1');
+        expect(response.body).toHaveProperty('name', 'samwise');
+
+        response = await request(server).put('/hobbits/999').send({ name: 'sauron' });
+        expect(response.status).toBe(404);
+
+        response = await request(server).put('/hobbits/4').send({});
+        expect(response.status).toBe(400);
+    });
+});

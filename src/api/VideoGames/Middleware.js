@@ -13,13 +13,19 @@ function gameBodyChecker (req, res, next) {
     const { game, rating, platform } = req.body 
 
     if (game === undefined && rating === undefined && platform === undefined){
-        return res.status(400).json({ message: 'Game, rating, and platform is required' })
+        return res.status(400).json({ message: 'game, rating, and platform is required' })
+    } else if (game === undefined && rating === undefined) {
+        return res.status(400).json({ message: 'game and rating is required' })
+    } else if (game === undefined && platform === undefined) {
+        return res.status(400).json({ message: 'game and platform is required' })
+    } else if (rating === undefined && platform === undefined) {
+        return res.status(400).json({ message: 'rating and platform is required' })
     } else if (game === undefined) {
-        return res.status(400).json({ message: 'Game is required' })
+        return res.status(400).json({ message: 'game is required' })
     } else if (rating === undefined) {
-        return res.status(400).json({ message: 'Rating is required' })
+        return res.status(400).json({ message: 'rating is required' })
     } else if (platform === undefined) {
-        return res.status(400).json({ message: 'Platform is required' })
+        return res.status(400).json({ message: 'platform is required' })
     } else {
         next()
     }
