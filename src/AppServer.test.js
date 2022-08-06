@@ -15,7 +15,7 @@ afterAll(async () => {
     process.env.NODE_ENV = 'development'
 })
 
-test('I love Testing of all Kinds!', () => {
+test('I love testing of all kinds!', () => {
     expect(true).toBe(true)
 })
 test('check environment', () => {

@@ -1,17 +1,23 @@
 /// <reference types="cypress" />
 
-describe('Testing Test', () => {
+// import db from '../../../src/data/db-config';
+// const server = require('../../../src/api/server')
+// const request = require('supertest')
 
-    beforeEach(()=>{
-        cy.visit('http://localhost:3000/')
-    })
+// beforeEach(async () => {
+//   await db('videogames').truncate()
+//   await db.seed.run()
+// })
 
-    it('Does not do much!', () => {
-      expect(true).equal(true)
-    })
+// afterAll(async () => {
+//   await db.destroy()
+// })
 
-    // For Now helps stops loop
-    it('Visits the Kitchen Sink', () => {
-        cy.visit('http://localhost:3000/')
-      })
+describe('Server Tests', () => {
+
+  it('Server Is Up', () => {
+    cy.request('http://localhost:3000/api/videogames/')
+    // cy.should('have.length.above', 1) 
   })
+
+})
