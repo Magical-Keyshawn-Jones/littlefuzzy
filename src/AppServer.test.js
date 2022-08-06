@@ -1,12 +1,15 @@
 const db = require('./data/db-config')
-const gameModel = require('./api/VideoGames/Model')
 const server = require('./api/server')
 const request = require('supertest')
 
+// Run test file at least 4x to see if all test pass
+// or increase jest.setTimeout() to 20secs
+jest.setTimeout(20000)
 beforeEach(async () => {
     await db('videogames').truncate()
     await db.seed.run()
 })
+
 afterAll(async () => {
     await db.destroy()
     process.env.NODE_ENV = 'development'

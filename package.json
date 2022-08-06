@@ -30,6 +30,7 @@
     "seed": "npx knex seed:run",
     "build": "react-scripts build",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
+    "cypressServer": "npx cypress run --spec cypress/e2e/Tests/AppServer.cy.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
