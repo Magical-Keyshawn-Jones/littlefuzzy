@@ -29,7 +29,7 @@
     "server": "nodemon src/api/runServer.js",
     "seed": "npx knex seed:run",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,6 +53,7 @@
   "devDependencies": {
     "cypress": "^10.4.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.4"
   }
 }

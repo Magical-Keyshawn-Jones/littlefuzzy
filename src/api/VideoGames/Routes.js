@@ -43,7 +43,7 @@ videoGames.post('/', gameMiddleware.gameBodyChecker, (req, res) => {
 })
 
 // Change Game with that id
-videoGames.put('/:id', gameMiddleware.gameIdChecker, gameMiddleware.gameBodyChecker, (req, res) => {
+videoGames.put('/:id', gameMiddleware.gameIdChecker, gameMiddleware.gameBodyChecker2, (req, res) => {
     const { id } = req.params
     const { body } = req
 
@@ -53,7 +53,7 @@ videoGames.put('/:id', gameMiddleware.gameIdChecker, gameMiddleware.gameBodyChec
     })
     .catch(err => {
         console.log(err)
-        res.status(500).json({ message: 'Could update Game with that id' })
+        res.status(500).json({ message: 'Could not update Game with that id' })
     })
 })
 
