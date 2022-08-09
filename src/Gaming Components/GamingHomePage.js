@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function GamingHomePage(props) {
   const [current, setCurrent] = useState(7);
-  const { gamingImages } = props
+  const { gamingImages, axiosTest } = props
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,7 +43,7 @@ export default function GamingHomePage(props) {
       </div>
       <aside className='middleLineSpace'></aside>
       <div className='bottomHalf'>
-        <p> Insert reviews Here</p>
+        <p>{axiosTest}</p>
       </div>
     </div>
   );

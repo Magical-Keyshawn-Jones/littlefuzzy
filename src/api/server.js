@@ -7,10 +7,6 @@ server.use(express.json())
 
 server.use('/api/videoGames', videoGames)
 
-server.use((req, res) => {
-    res.header('Access-Control-Allow-Origin', '*')
-})
-
 server.use((err, req, res, next) => {
     console.log(err)
     res.status(500).json({ message: 'There was an error performing the operation' })

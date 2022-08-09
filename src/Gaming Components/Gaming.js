@@ -1,4 +1,5 @@
 import './GamingStyles.css'
+import axios from 'axios';
 import GamingHomePage from './GamingHomePage'
 import gamingImages from "./exportGamingImages";
 import { Routes, Route} from 'react-router-dom'
@@ -13,11 +14,20 @@ import { Routes, Route} from 'react-router-dom'
 export function Gaming (props) {
     // Login function takes in values,stores token, & send user to the website
 
+    axios.get('http://localhost:9000/api/videogames/')
+    .then(res => {
+        console.log(res.data[0].Game)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
     return (
         <Routes>
             {/* <Route path='/' element={
                 <div> testing this thing</div>
             } /> */}
+            <p></p>
             <Route path='/' element={<GamingHomePage gamingImages={gamingImages} />} />
         </Routes>
     )
