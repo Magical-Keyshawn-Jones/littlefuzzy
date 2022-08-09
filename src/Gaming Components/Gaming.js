@@ -27,7 +27,6 @@ export function Gaming (props) {
             {/* <Route path='/' element={
                 <div> testing this thing</div>
             } /> */}
-            <p></p>
             <Route path='/' element={<GamingHomePage gamingImages={gamingImages} />} />
         </Routes>
     )
