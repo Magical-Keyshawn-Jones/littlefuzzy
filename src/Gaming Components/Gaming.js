@@ -14,9 +14,24 @@ import { Routes, Route} from 'react-router-dom'
 export function Gaming (props) {
     // Login function takes in values,stores token, & send user to the website
 
-    axios.get('http://localhost:9000/api/videogames/')
+    const game = {
+        game: 'LittleFuzzy',
+        rating: 8,
+        platform: 'Playstation 4',
+        comment: 'My first real API'
+    }
+
+    // axios.post('https://littlefuzzy-gaming-server.herokuapp.com/', game)
+    // .then(res => {
+    //     console.log(res)
+    // })
+    // .catch(err => {
+    //     console.log(err)
+    // })
+
+    axios.get('https://littlefuzzy-gaming-server.herokuapp.com/games')
     .then(res => {
-        console.log(res.data[0].Game)
+        console.log(res.data)
     })
     .catch(err => {
         console.log(err)
