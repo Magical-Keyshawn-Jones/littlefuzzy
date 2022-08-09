@@ -7,8 +7,6 @@ const container = document.getElementById('root')
 export const root = createRoot(container)
 root.render(<Apps/>)
 
-console.log('You are Awesome and amazing!')
-
 // import React from "react";
 // import ReactDOM from "react-dom";
 // import { Provider } from "react-redux";

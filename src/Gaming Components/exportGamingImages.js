@@ -6,11 +6,12 @@ import minecraft from '../Images/Gaming/Minecraft.jpg'
 import moderWarfare from '../Images/Gaming/Modern_warfare_2.jpg'
 import overwatch from '../Images/Gaming/Overwatch_2.jpeg'
 import uncharted4 from '../Images/Gaming/Uncharted4.jpg'
+import strangers from '../Images/Gaming/Strangers_of_Paradise2.jpg'
 
 const gamingImages = [
     apexLegends, eldenRing, fortnite, 
     godOfWar, minecraft, moderWarfare,
-    overwatch, uncharted4
+    overwatch, uncharted4, strangers
 ]
 
 export default gamingImages

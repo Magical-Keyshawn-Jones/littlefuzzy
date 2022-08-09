@@ -1,28 +1,62 @@
-/* Gaming Decorations */
 
-.GamingHome {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .GamingHome::before {
-    content: '';
-    display: block;
-    position: absolute;
-    opacity: .6;
-    background-position: 50% 0;
-    width: 100%;
-    height: 102%;
-    background-size: cover;
-    background-image: url(../Images/Gaming/God_of_War.jpg);
-    background-repeat: no-repeat;
-  }
+.gamingHome {
+  background: linear-gradient(to bottom right, black, grey);
+}
+
+#edgeSpacing {
+  padding: 0 2rem;
+}
+
+.topHalf {
+  display: flex;
+  padding-top: .3rem;
+  height: 30%;
+}
+
+.topImage {
+  width: 20%;
+}
+
+.topLineSpace {
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
+  border-radius: 3rem;
+  width: 3%;
+}
+
+.gameCoding {
+  color: white;
+}
+
+.gameCoding h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.gameCoding p {
+  font-size: 2rem;
+}
+
+.secondP {
+  margin-top: 4rem;
+}
+
+.middleLineSpace {
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
+  margin: 4rem 2rem;
+  border-radius: 3rem;
+  height: 3%;
+}
+
+.bottomHalf {
+  height: auto
+}
+img {
+  height: 100%;
+  width: 100%;
+}
 
   /* Responsive Design */
 
   @media (max-width: 400px) {
-    .GamingTitle {
-      font-size: 1.3rem;
-    }
+
   }

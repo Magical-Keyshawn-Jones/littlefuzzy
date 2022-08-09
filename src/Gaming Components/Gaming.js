@@ -1,5 +1,6 @@
 import './GamingStyles.css'
 import GamingHomePage from './GamingHomePage'
+import gamingImages from "./exportGamingImages";
 import { Routes, Route} from 'react-router-dom'
 
 // To do list//
@@ -17,7 +18,7 @@ export function Gaming (props) {
             {/* <Route path='/' element={
                 <div> testing this thing</div>
             } /> */}
-            <Route path='/' element={<GamingHomePage/>} />
+            <Route path='/' element={<GamingHomePage gamingImages={gamingImages} />} />
         </Routes>
     )
 }

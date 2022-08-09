@@ -22,7 +22,6 @@ function App (props) {
     loading,
    } = props
 
-  console.log('Testing My amazing Debug')
   const dispatch = useDispatch()
 
   // Setting Redux with pokemon api
