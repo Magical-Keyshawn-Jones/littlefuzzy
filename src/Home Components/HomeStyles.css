@@ -104,8 +104,11 @@
   
   .aboutHeader {
     position: relative;
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 1rem;
     margin-bottom: 3rem;
+    border-bottom: solid 2px 
   }
 
   /* Responsive Designs */

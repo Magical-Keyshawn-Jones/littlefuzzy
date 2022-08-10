@@ -94,6 +94,13 @@ function Silly () {
 
     return (
        <div className='SillyFormHolder'>
+            <div className='contactInfo'>
+                <h1>Contact Info</h1>
+                <p>Email: <span className='pink'>Keyshawnjones29@gmail.com</span></p>
+                <p>Resume: <a className='smallFont' href="https://docs.google.com/document/d/1nPPaJ3IXBLdc8Mb_5HXHvvWGmfuH7KwUV3Gi7hTjDt4/edit?usp=sharing">https://docs.google.com/document/d/1nPPaJ3IXBLdc8Mb_5HXHvvWGmfuH7KwUV3Gi7hTjDt4/edit?usp=sharing</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/keyshawn-jones-a399a122a">https://www.linkedin.com/in/keyshawn-jones-a399a122a</a></p>
+                <p>Github: <a href="https://github.com/Magical-Keyshawn-Jones">https://github.com/Magical-Keyshawn-Jones</a></p>
+            </div>
             <form className='SillyForm'>
                 <h3>Create Your Story</h3>
                 <label>
@@ -107,32 +114,6 @@ function Silly () {
                     onChange={handleSilly}
                     />
                     {errorValues.name}
-                </label>
-
-                <label className='genderRadio'>
-                    <span>Gender</span> 
-                    <div>
-                    <label>
-                        Male
-                        <input
-                        type='radio'
-                        name='gender'
-                        value='Male'
-                        onChange={handleSilly}
-                        checked={silly.gender === 'Male'}
-                        />
-                    </label>
-                    <label>
-                        Female
-                        <input
-                        type='radio'
-                        name='gender'
-                        value='Female'
-                        onChange={handleSilly}
-                        checked={silly.gender === 'Female'}
-                        />
-                    </label>
-                    </div>
                 </label>
 
                 <label>
@@ -221,8 +202,10 @@ function Silly () {
             </form>
             <div className='SillyParagraph'>
                 <div>
-                    <p>{`My ${person[bestPersonNumber || personNumber]} has ${movementVerbs[bestMovementNumber || movementNumber]}
-                     toward a group of polar bears. They had a tea party, which tragically ended with the Polar bears eating the ${person[bestPersonNumber || personNumber]}`}
+                    <p>{`My ${person[bestPersonNumber || personNumber]}${!silly.name ? '' : ','}${!silly.name ? '' : silly.name}${!silly.name ? '' : ','}
+                     has ${movementVerbs[bestMovementNumber || movementNumber]} toward a group of 
+                     ${silly.goodAnimals === true && silly.badAnimals === false ? 'good' : ''} ${silly.goodAnimals === false && silly.badAnimals === true ? 'bad' : ''}
+                     ${!silly.maritalStatus ? '' : silly.maritalStatus} ${!silly.animal ? 'polar bears' : silly.animal}.`}
                      </p>
                 </div>
             </div>

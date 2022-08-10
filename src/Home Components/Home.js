@@ -19,14 +19,10 @@ const dimensions = {
     // About Me Component
     const aboutMe = 
         <div className='aboutMe'>
-             <h1 className='aboutHeader'>Insert Skills Here</h1>
+            <h1 className='aboutHeader'>Technical Super Skills</h1>
             <ol>
-                <li>My nickname is <span className='pink'>Doorknob</span></li>
-                {/* <li>I love the color <span className='pink'>pink</span></li> */}
-                {/* <li>I have a passion for God, Video Games, and Coding</li> */}
-                <li>I am skilled at Javascript, Html, CSS, React,</li>
-                <li>Redux, SQL</li>
-                <li>Put "About Me" at the Bottom</li>
+                <li> HTML, CSS, JavaScript, React.js, Redux, Hooks, Context API, Yup,  Jest, Cypress, Axios, Responsive Design</li>
+                <li>Node.js, Express, SQL, Git CLI, GitHub, VS Code, Vercel, Heroku, Knex</li>
                 <li><span className='bold'>100% People Person!</span></li>
             </ol>
         </div>
