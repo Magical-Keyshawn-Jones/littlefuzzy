@@ -2,7 +2,16 @@ import { useState, useEffect } from "react";
 
 export default function GamingHomePage(props) {
   const [current, setCurrent] = useState(7);
-  const { gamingImages, axiosTest } = props
+  const { gamingImages, videoGameReviews } = props
+
+  const game = {
+    game: 'LittleFuzzy',
+    rating: 8,
+    platform: 'Playstation 4',
+    comment: 'My first real API'
+  }
+
+  // console.log(videoGameReviews)
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,7 +52,7 @@ export default function GamingHomePage(props) {
       </div>
       <aside className='middleLineSpace'></aside>
       <div className='bottomHalf'>
-        <p>{axiosTest}</p>
+        {/* <p>{axiosTest}</p> */}
       </div>
     </div>
   );

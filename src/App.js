@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link}from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
-import { fetchPokemon } from './Redux Related/Reducers';
+import { fetchPokemon, fetchVideoGameReviews } from './Redux Related/Reducers';
 import {Pokemon, Cooking, Gaming, Games, Home} from './AppRouteExports'
 
 // import * as actionCreators from './Redux Related/Action-Creators'
@@ -20,6 +20,7 @@ function App (props) {
   const { 
     pokemon,
     loading,
+    videoGameReviews
    } = props
 
   const dispatch = useDispatch()
@@ -27,6 +28,7 @@ function App (props) {
   // Setting Redux with pokemon api
     useEffect(()=>{
       dispatch(fetchPokemon())
+      dispatch(fetchVideoGameReviews())
     },[]) 
 
   // Storing Welcome words in a Variable
@@ -65,19 +67,22 @@ function App (props) {
         <Routes>
           <Route path='/pokemon/*' element={<Pokemon pokemon={pokemon} loading={loading} />}/>
           <Route path='/cooking' element={<Cooking />}/>
-          <Route path='/gaming/:viral' element={<Games/>}/>
-          <Route path='/gaming/*' element={<Gaming/>}/>
+          {/* <Route path='/gaming/:viral' element={<Games/>}/> */}
+          <Route path='/gaming/*' element={<Gaming videoGameReviews={videoGameReviews}/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
     </div>
   );
 }
 
+// Redux Storage Container
 function GrabbingStorage(state){
   return {
+    videoGameReviews: state.videoGameReviews,
     pokemon: state.pokemon,
     loading: state.loading,
   }
 }
 
+// Redux Storage connecting to the App
 export default connect(GrabbingStorage)(App)

@@ -8,8 +8,41 @@ export const  fetchPokemon = createAsyncThunk('pokemon/grabbingPokemon', async (
     .then(res=>{
         return res.data.results
     })
-    .catch(err=> console.log('error!', err) )
+    .catch(err=> {
+        console.log('error!', err)
+    })
+
     return response
+})
+
+// This Grabs Video Game Reviews
+export const fetchVideoGameReviews = createAsyncThunk('videoGameReview/grabbingReviews', async () => {
+
+    const response = await axios.get('https://littlefuzzy-gaming-server.herokuapp.com/games')
+    .then(res => {
+        return res.data
+    })
+    .catch(err => {
+        console.log('error!', err)
+    }) 
+
+    return response
+})
+
+// Storing Video Game Review Data
+const videoGameReviewsSlice = createSlice({
+    name: 'videoGameReviews',
+    initialState: 'Insert Data Here',
+
+    extraReducers: builder => {
+        builder
+        .addCase(fetchVideoGameReviews.pending, (state, action) => {
+            return state = true
+        })
+        .addCase(fetchVideoGameReviews.fulfilled, (state, action) => {
+            return state = action.payload
+        })
+    }
 })
 
 // Storing Pokemon Data
@@ -51,6 +84,7 @@ const loadingSlice = createSlice({
 export const { setPokemon } = pokemonSlice.actions
 export const { setLoading } = loadingSlice.actions
 export {
+    videoGameReviewsSlice,
     pokemonSlice,
     loadingSlice,
 }

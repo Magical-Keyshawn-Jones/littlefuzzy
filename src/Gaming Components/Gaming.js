@@ -12,37 +12,12 @@ import { Routes, Route} from 'react-router-dom'
 // Add a login Page
 
 export function Gaming (props) {
-    // Login function takes in values,stores token, & send user to the website
 
-    const game = {
-        game: 'LittleFuzzy',
-        rating: 8,
-        platform: 'Playstation 4',
-        comment: 'My first real API'
-    }
-
-    // axios.post('https://littlefuzzy-gaming-server.herokuapp.com/', game)
-    // .then(res => {
-    //     console.log(res)
-    // })
-    // .catch(err => {
-    //     console.log(err)
-    // })
-
-    axios.get('https://littlefuzzy-gaming-server.herokuapp.com/games')
-    .then(res => {
-        console.log(res.data)
-    })
-    .catch(err => {
-        console.log(err)
-    })
+    const { videoGameReviews } = props
 
     return (
         <Routes>
-            {/* <Route path='/' element={
-                <div> testing this thing</div>
-            } /> */}
-            <Route path='/' element={<GamingHomePage gamingImages={gamingImages} />} />
+            <Route path='/' element={<GamingHomePage gamingImages={gamingImages} videoGameReviews={videoGameReviews} />} />
         </Routes>
     )
 }
