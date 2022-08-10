@@ -20,11 +20,6 @@ const dimensions = {
     const aboutMe = 
         <div className='aboutMe'>
              <h1 className='aboutHeader'>Insert Skills Here</h1>
-             {/* <p>
-                 My nickname is Doorknob. I have a passion for God, video games, and coding. I am pretty skilled at
-                 <br/>
-                 Javascript, Html, CSS, and React so far
-             </p> */}
             <ol>
                 <li>My nickname is <span className='pink'>Doorknob</span></li>
                 {/* <li>I love the color <span className='pink'>pink</span></li> */}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import GamingForm from "./GamingForm";
 
 export default function GamingHomePage(props) {
   const [current, setCurrent] = useState(7);
@@ -52,7 +53,7 @@ export default function GamingHomePage(props) {
       </div>
       <aside className='middleLineSpace'></aside>
       <div className='bottomHalf'>
-        {/* <p>{axiosTest}</p> */}
+        <GamingForm/>
       </div>
     </div>
   );

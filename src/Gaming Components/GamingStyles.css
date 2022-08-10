@@ -50,6 +50,16 @@
 .bottomHalf {
   height: auto
 }
+
+.formContainer {
+  background-color: aqua;
+}
+
+.formContainer form {
+  background-color: brown;
+  margin: 0 2rem;
+}
+
 img {
   height: 100%;
   width: 100%;
