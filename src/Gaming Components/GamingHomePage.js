@@ -4,7 +4,11 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export default function GamingHomePage(props) {
   const [current, setCurrent] = useState(7);
-  const { gamingImages, videoGameReviews } = props
+  const { 
+    gamingImages, 
+    videoGameReviews,
+    grabReviews
+   } = props
 
   const game = {
     game: 'LittleFuzzy',
@@ -59,7 +63,7 @@ export default function GamingHomePage(props) {
       <aside className='middleLineSpace'></aside>
       
       <div className='bottomHalf'>
-        <GamingForm/>
+        <GamingForm grabReviews={grabReviews}/>
 
         <aside className='bottomLineSpace'></aside>
 

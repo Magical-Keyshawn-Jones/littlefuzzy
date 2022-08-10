@@ -1,9 +1,10 @@
 import axios from "axios"
 import * as yup from 'yup'
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 import gamingFormTest from "./GamingFormValidation"
 
-export default function GamingForm () {
+export default function GamingForm (grabReviews) {
 
     // Initial Form Values
     const initialFormValues = {
@@ -20,6 +21,8 @@ export default function GamingForm () {
         platform: '',
         comment: ''
     }
+
+    const dispatch = useDispatch()
 
     // Storing Form & Error Values inside of state
     const [formValues, setFormValues, handleChanges] = useInput(initialFormValues)
@@ -62,7 +65,8 @@ export default function GamingForm () {
         
         axios.post('https://littlefuzzy-gaming-server.herokuapp.com/', formValues)
         .then(res => {
-            console.log(res)
+            console.log(res.data)
+            // dispatch(grabReviews())
         })
         .catch(err => {
             const message = {
@@ -71,7 +75,6 @@ export default function GamingForm () {
             }
             console.log(message)
         })
-
     }
 
     return (
@@ -127,6 +130,7 @@ export default function GamingForm () {
                 </label>
 
                 <button onClick={event => {submitButton(event)}}>Submit</button>
+                <button>Refresh Reviews</button>
             </form>
         </div>
     )

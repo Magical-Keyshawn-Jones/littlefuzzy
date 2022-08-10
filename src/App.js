@@ -20,7 +20,7 @@ function App (props) {
   const { 
     pokemon,
     loading,
-    videoGameReviews
+    videoGameReviews,
    } = props
 
   const dispatch = useDispatch()
@@ -51,7 +51,7 @@ function App (props) {
             <Link to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</Link>
             <Link to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</Link>
             <Link to='/cooking'className='Link' onClick={()=> setNavWording(navWords.cooking)}>Cooking</Link>
-            <Link to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</Link>
+            {/* <Link to='/pokemon'className='Link' onClick={()=> setNavWording(navWords.pokemon)}>Pokemon</Link> */}
 
             {/* <NavLink to='/' className='Link' id='HomeButton' onClick={() => setNavWording(navWords.home)}>Home</NavLink>
             <NavLink to='/gaming' className='Link' onClick={()=> setNavWording(navWords.gaming)}>Gaming</NavLink>
@@ -68,7 +68,7 @@ function App (props) {
           <Route path='/pokemon/*' element={<Pokemon pokemon={pokemon} loading={loading} />}/>
           <Route path='/cooking' element={<Cooking />}/>
           {/* <Route path='/gaming/:viral' element={<Games/>}/> */}
-          <Route path='/gaming/*' element={<Gaming videoGameReviews={videoGameReviews}/>}/>
+          <Route path='/gaming/*' element={<Gaming videoGameReviews={videoGameReviews} grabReviews={fetchVideoGameReviews}/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
     </div>

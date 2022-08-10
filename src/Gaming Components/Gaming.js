@@ -12,11 +12,11 @@ import { Routes, Route} from 'react-router-dom'
 
 export function Gaming (props) {
 
-    const { videoGameReviews } = props
+    const { videoGameReviews, grabReviews } = props
 
     return (
         <Routes>
-            <Route path='/' element={<GamingHomePage gamingImages={gamingImages} videoGameReviews={videoGameReviews} />} />
+            <Route path='/' element={<GamingHomePage gamingImages={gamingImages} videoGameReviews={videoGameReviews} grabReviews={grabReviews} />} />
         </Routes>
     )
 }
