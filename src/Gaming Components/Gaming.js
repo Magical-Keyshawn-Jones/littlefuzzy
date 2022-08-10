@@ -1,5 +1,4 @@
 import './GamingStyles.css'
-import axios from 'axios';
 import GamingHomePage from './GamingHomePage'
 import gamingImages from "./exportGamingImages";
 import { Routes, Route} from 'react-router-dom'

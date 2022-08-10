@@ -1,6 +1,8 @@
 
 .gamingHome {
   background: linear-gradient(to bottom right, black, grey);
+  height: max-content;
+  /* height: 200rem; */
 }
 
 #edgeSpacing {
@@ -21,6 +23,7 @@
   background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
   border-radius: 3rem;
   width: 3%;
+  height:auto
 }
 
 .gameCoding {
@@ -44,25 +47,94 @@
   background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
   margin: 4rem 2rem;
   border-radius: 3rem;
-  height: 3%;
+  height: 2rem;
+  /* width: 40rem; */
 }
 
 .bottomHalf {
-  height: auto
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.loading {
+  font-size: 5rem;
+  color: white;
 }
 
 .formContainer {
-  background-color: aqua;
+  background-color: rgb(0, 158, 158);
+  margin-left: 2rem;
+  height: 20rem;
+  font-size: 2.6rem;
+  width: 70%;
+  height: fit-content;
+  border: outset 5px black
 }
 
 .formContainer form {
-  background-color: brown;
-  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  /* background-color: brown; */
+  height: 100%;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.formContainer input{
+  margin-left: 2rem;
+  height: 1.5rem;
+}
+
+.formContainer label, .formContainer button {
+  margin-left: 2rem;
+}
+
+.formContainer button {
+  font-size: 1.5rem;
+  width: fit-content;
+  height: auto;
+}
+
+.formContainer h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 img {
   height: 100%;
   width: 100%;
+}
+
+.reviewTab {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  height: fit-content;
+  border: inset  black 5px 
+}
+
+.reviewTab h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.rightAlign {
+  text-align: right;
+  margin-right: 2rem
+}
+
+.bottomLineSpace {
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 179), rgb(0, 183, 255));
+  border-radius: 3rem;
+  width: 5%;
+  margin: 0 5rem;
 }
 
   /* Responsive Design */

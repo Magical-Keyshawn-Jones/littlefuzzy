@@ -7,9 +7,8 @@ const gamingFormTest = yup.object().shape({
     .required('Game is required'),
 
     rating: yup
-    .number()
-    .integer()
-    .oneOf([1,2,3,4,5,6,7,8,9,10])
+    .string()
+    .oneOf(['1','2','3','4','5','6','7','8','9','10'])
     .required('Rating is required'),
 
     platform: yup

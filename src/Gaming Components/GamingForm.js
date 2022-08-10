@@ -78,7 +78,55 @@ export default function GamingForm () {
         <div className='formContainer'>
             <form>
                 <h1>Burning to Review Something?</h1>
-                <button onClick={(event) => {submitButton(event)}}>Submit Here</button>
+
+                <label>
+                    Game
+                    <input
+                    type='text'
+                    name='game'
+                    placeholder='Type game here'
+                    value={formValues.game}
+                    onChange={handleChanges}
+                    />
+                    {errorValues.game}
+                </label>
+
+                <label>
+                    Rating
+                    <input
+                    type='text'
+                    name= 'rating'
+                    placeholder='Rating is out of 10'
+                    value={formValues.rating}
+                    onChange={handleChanges}
+                    />
+                    {errorValues.rating}
+                </label>
+
+                <label>
+                    Platform
+                    <input
+                    type='text'
+                    name='platform'
+                    placeholder='Type platform here'
+                    onChange={handleChanges}
+                    />
+                    {errorValues.platform}
+                </label>
+
+                <label>
+                    Comment
+                    <input
+                    type='text'
+                    name='comment'
+                    placeholder='Type comment here'
+                    value={formValues.comment}
+                    onChange={handleChanges}
+                    />
+                    {errorValues.comment}
+                </label>
+
+                <button onClick={event => {submitButton(event)}}>Submit</button>
             </form>
         </div>
     )

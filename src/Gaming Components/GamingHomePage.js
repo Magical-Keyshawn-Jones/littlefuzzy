@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import GamingForm from "./GamingForm";
+import { nanoid } from "@reduxjs/toolkit";
 
 export default function GamingHomePage(props) {
   const [current, setCurrent] = useState(7);
@@ -11,7 +12,10 @@ export default function GamingHomePage(props) {
     platform: 'Playstation 4',
     comment: 'My first real API'
   }
-
+  
+  // videoGameReviews.forEach((game, index) => {
+  //   console.log(index)
+  // });
   // console.log(videoGameReviews)
 
   useEffect(() => {
@@ -23,7 +27,7 @@ export default function GamingHomePage(props) {
         default:
           setCurrent(current + 1);
       }
-    }, 6000);
+    }, 5000);
   }, [current]);
 
   return (
@@ -51,9 +55,28 @@ export default function GamingHomePage(props) {
           </div>
         </div>
       </div>
+
       <aside className='middleLineSpace'></aside>
+      
       <div className='bottomHalf'>
         <GamingForm/>
+
+        <aside className='bottomLineSpace'></aside>
+
+        <div>
+          {videoGameReviews === true ? <h1 className='loading' >Loading...</h1> : videoGameReviews.map( item => {
+            return (
+              <section className='reviewTab' key={nanoid(10)}>
+                <h1> {item.Game} </h1>
+                <p className='rightAlign' > Rating: {item.Rating}/10 </p>
+                <p> Platform: {item.Platform} </p>
+                {/* <p> Comment: {item.Comment} </p> */}
+                {!item.Comment ? '' : <p> Comment: {item.Comment} </p>}
+              </section>
+            )
+          })}
+
+        </div>
       </div>
     </div>
   );

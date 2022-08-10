@@ -32,7 +32,7 @@ export const fetchVideoGameReviews = createAsyncThunk('videoGameReview/grabbingR
 // Storing Video Game Review Data
 const videoGameReviewsSlice = createSlice({
     name: 'videoGameReviews',
-    initialState: 'Insert Data Here',
+    initialState: true,
 
     extraReducers: builder => {
         builder
