@@ -9,6 +9,8 @@ Uses yup to validate the form
 Gaming: 
 Uses an API I created to populate the review section
 The API uses SQLlite to store the data sent to it
+My API https://github.com/Magical-Keyshawn-Jones/Video-Games-API.git
+-https://littlefuzzy-gaming-server.herokuapp.com/
 
 Test: 
 Incorporated test to make sure api works
