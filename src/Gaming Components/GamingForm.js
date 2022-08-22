@@ -75,6 +75,9 @@ export default function GamingForm (grabReviews) {
             }
             console.log(message)
         })
+
+        setFormValues(initialFormValues)
+
     }
 
     return (
